@@ -1,0 +1,415 @@
+/* Main Stylesheet for Derekverbrugge.com */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+/*h1 link hover and color properties*/
+h1 a {
+    /*font-size: 50px;*/
+    /*display: block;*/
+    color: #f2f2f2;
+    /*text-align: center;*/
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+h1 a:visited {
+    /*font-size: 50px;*/
+    /*display: block;*/
+    color: #f2f2f2;
+    /*text-align: center;*/
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+h1 a:hover {
+    /*font-size: 50px;*/
+    /*background-color: #f2f2f2;*/
+    color: #f2f2f2;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+/*h2 link hover and color properties*/
+h2 a {
+    /*display: block;*/
+    color: grey;
+    /*text-align: center;*/
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+h2 a:visited {
+    /*display: block;*/
+    color: grey;
+    /*text-align: center;*/
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+h2 a:hover {
+    /*background-color: #f2f2f2;*/
+    color: rgb(56, 138, 90);
+}
+
+h3 {
+    font-size: 17px;
+}
+
+h3 a {
+    /*display: block;*/
+    color: grey;
+    /*text-align: center;*/
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+h3 a:visited {
+    /*display: block;*/
+    color: grey;
+    /*text-align: center;*/
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+h3 a:hover {
+    /*background-color: #f2f2f2;*/
+    color: rgb(56, 138, 90);
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h4 a {
+    /*display: block;*/
+    color: grey;
+    /*text-align: center;*/
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+h4 a:visited {
+    /*display: block;*/
+    color: grey;
+    /*text-align: center;*/
+    /*padding: 14px 16px;*/
+    text-decoration: none;
+}
+
+h4 a:hover {
+    /*background-color: #f2f2f2;*/
+    color: rgb(56, 138, 90);
+}
+
+p {
+    font-size: 16px;
+}
+
+/*Styles title*/
+
+.title {
+  font-size: 60px;
+  text-shadow: 0 0 3px grey;
+}
+
+/*h1 link hover and color properties*/
+.title a {
+  /*font-size: 50px;*/
+  /*display: block;*/
+  color: #f2f2f2;
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+}
+
+.title a:visited {
+  /*font-size: 50px;*/
+  /*display: block;*/
+  color: #f2f2f2;
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+}
+
+.title a:hover {
+  /*font-size: 50px;*/
+  /*background-color: #f2f2f2;*/
+  color: #f2f2f2;
+}
+
+/* Style the header */
+
+
+.header {
+  background-image: url("mountains.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  text-align: center;
+  color: #f2f2f2;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/*h1 link hover and color properties*/
+.header h1 a {
+  /*font-size: 50px;*/
+  /*display: block;*/
+  color: #f2f2f2;
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+}
+
+.header h1 a:visited {
+  /*font-size: 50px;*/
+  /*display: block;*/
+  color: #f2f2f2;
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+}
+
+.header h1 a:hover {
+  /*font-size: 50px;*/
+  /*background-color: #f2f2f2;*/
+  color: #f2f2f2;
+}
+
+/*h2 link hover and color properties*/
+.header a {
+  /*display: block;*/
+  color: #f2f2f2;
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+}
+
+.header a:visited {
+  /*display: block;*/
+  color: #f2f2f2;
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+}
+
+/*.pageLink:hover {
+  background-color: #f2f2f2;
+  color: rgb(56, 138, 90);
+}*/
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(98, 155, 122);
+}
+
+/* Style the topnav links */
+.topnav a {
+  /*float: left;*/
+  display: block;
+  /*color: #f2f2f2;*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.topnav a:visited {
+    /*float: left;*/
+    display: block;
+    color: #f2f2f2;/*fix?*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #f2f2f2;
+  color: rgb(56, 138, 90);
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  /*width: 30.33%;*/
+  padding: 15px;
+  margin: 15px;
+  border: 0px solid #f2f2f2;
+  border-radius: 7px;
+  background-color: white;
+  color: grey;
+  width: 97%;
+}
+
+.column.dark  {
+    float: left;
+    /*width: 30.33%;*/
+    padding: 15px;
+    margin: 15px;
+    border: 0px solid #f2f2f2;
+    border-radius: 7px;
+    background-color: #f2f2f2;
+    color: grey;
+    width: 97%;
+  }
+
+.column.side {
+    width: 40%;
+}
+
+.column.main {
+    width: 55%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/*dropdown*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(98, 155, 122);
+  }
+  
+li {
+    float: left;
+  }
+
+  li.right {
+    float: right;
+  }
+  
+li a, .dropbtn {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+li a:hover, .dropdown:hover .dropbtn { /*back of nav buttons*/
+    color: rgb(56, 138, 90);
+    background-color: #f2f2f2;
+  }
+  
+li.dropdown {
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    min-width: 160px;
+    box-shadow: 0px 15px 16px 0px rgba(0,0,0,0.6);
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    color: slategray;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+.dropdown-content a:hover {background-color: #f2f2f2;}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Form*/
+
+/** {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: rgb(98, 155, 122);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: rgb(56, 138, 90);
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-40 {
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+  }
+  
+  .col-55 {
+    float: left;
+    width: 55%;
+    margin-top: 6px;
+  }*/
+
+/*footer*/
+.footer {
+    /*position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 4px;
+    background-color: rgb(79, 112, 93);
+    color: lightgrey;
+    text-align: right;
+ }

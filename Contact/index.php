@@ -39,7 +39,7 @@ if (!empty($_SESSION['_contact_form_success'])) {
     <!--contact-->
 
     <div class="header">
-        <p class="title"><b><a href="https://derekverbrugge.com/contact.html">DerekVerbrugge.com</a></b></p>
+        <p class="title"><b><a href="https://derekverbrugge.com/contact">DerekVerbrugge.com</a></b></p>
         <!--<a href="https://derekverbrugge.com/contact.html">Contact</a>-->
     </div>
 
@@ -57,7 +57,7 @@ if (!empty($_SESSION['_contact_form_success'])) {
             </div>
         </li>
         <!--<li><a href="https://derekverbrugge.com/about.html">About</a></li>-->
-        <li class="right"><a href="https://derekverbrugge.com/contact.html">Contact</a></li>
+        <li class="right"><a href="https://derekverbrugge.com/contact">Contact</a></li>
 
       </ul>
 
@@ -68,7 +68,7 @@ if (!empty($_SESSION['_contact_form_success'])) {
         
 
         <div class="column">
-            <center><h2><a href="https://derekverbrugge.com/contact.html">Contact</a></h2></center>
+            <center><h2><a href="https://derekverbrugge.com/contact">Contact</a></h2></center>
             <div class="column dark">
                 <div class="column side">
                     <h3>Serving Manchester, NH and Southern New Hampshire</h3>
@@ -155,7 +155,7 @@ if (!empty($_SESSION['_contact_form_success'])) {
             <a href="https://derekverbrugge.com">Home</a> <br> 
             <!--<a href="https://derekverbrugge.com/portfolio.html">Portfolio</a></br>-->
             <a href="https://derekverbrugge.com/about.html">About</a><br>
-            <a href="https://derekverbrugge.com/contact.html">Contact</a><br>
+            <a href="https://derekverbrugge.com/contact">Contact</a><br>
             <br><br><br>
             
             

@@ -118,6 +118,37 @@ h4 a:hover {
 
 p {
     font-size: 16px;
+    text-decoration: none;
+}
+
+p a:link {
+  /*display: block;*/
+  color: lightgray;
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+}
+
+p a:visited {
+  /*display: block;*/
+  color: darkslategrey;
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+}
+
+p a:hover {
+  /*background-color: #f2f2f2;*/
+  color: rgb(56, 138, 90);
+  text-decoration: none;
+}
+
+p a:active {
+  /*display: block;*/
+  color: rgb(56, 138, 90);
+  /*text-align: center;*/
+  /*padding: 14px 16px;*/
+  text-decoration: none;
 }
 
 /*Styles title*/
@@ -276,6 +307,10 @@ p {
     width: 40%;
 }
 
+.column.three {
+  width: 30%;
+}
+
 .column.main {
     width: 55%;
 }
@@ -289,7 +324,7 @@ p {
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width:500px) {
-  .column, .dark, .side, .main {
+  .column, .column.dark, .column.side, .column.main, .column.three {
     width: 97%;
   }
 }

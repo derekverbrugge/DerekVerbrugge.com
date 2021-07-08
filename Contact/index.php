@@ -51,9 +51,9 @@ if (!empty($_SESSION['_contact_form_success'])) {
             <!--<a href="javascript:void(0)" class="dropbtn">Portfolio</a>-->
             <a href="https://derekverbrugge.com/about.html" class="dropbtn">About</a>
             <div class="dropdown-content">
-              <a href="https://derekverbrugge.com/interior-painting.html">Interior Painting</a>
-              <!--<a href="#">Fine Art</a>-->
-              <!--<a href="#">Software and Digital Assets</a>-->
+              <!--<a href="https://derekverbrugge.com/interior-painting.html">Interior Painting</a>-->
+              <a href="https://derekverbrugge.com/software-and-digital-assets.html">Software and Digital Assets</a>
+              <a href="https://derekverbrugge.com/fine-art.html">Fine Art</a>
             </div>
         </li>
         <!--<li><a href="https://derekverbrugge.com/about.html">About</a></li>-->

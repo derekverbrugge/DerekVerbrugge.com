@@ -1,4 +1,4 @@
-/* Main Stylesheet for Derekverbrugge.com - Refactored with Flexbox & CSS Variables */
+/* Main Stylesheet for Derekverbrugge.com - Mobile Responsive */
 
 :root {
   /* Colors */
@@ -17,11 +17,11 @@
   /* Typography */
   --font-family: Helvetica, Arial, sans-serif;
   --font-size-base: 16px;
-  --font-size-h1: 50px;
-  --font-size-h2: 20px;
-  --font-size-h3: 17px;
+  --font-size-h1: clamp(28px, 8vw, 50px);
+  --font-size-h2: clamp(18px, 5vw, 20px);
+  --font-size-h3: clamp(16px, 4vw, 17px);
   --font-size-h4: 16px;
-  --font-size-title: 60px;
+  --font-size-title: clamp(28px, 9vw, 60px);
 
   /* Spacing & Layout */
   --spacing-xs: 4px;
@@ -50,7 +50,7 @@ body {
 /* Headings */
 h1 {
   font-size: var(--font-size-h1);
-  margin: 0.5em 0;
+  margin: 0.4em 0;
 }
 
 h2 {
@@ -69,7 +69,7 @@ p {
   font-size: var(--font-size-base);
 }
 
-/* Consolidated link styles */
+/* Links */
 a {
   text-decoration: none;
   transition: color 0.2s ease, background-color 0.2s ease;
@@ -118,6 +118,7 @@ h4 a:hover {
 .title {
   font-size: var(--font-size-title);
   text-shadow: 0 0 3px var(--color-text);
+  margin: 0.3em 0;
 }
 
 /* Header */
@@ -126,28 +127,32 @@ h4 a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-color: var(--color-primary); /* fallback */
-  padding-top: 5px;
-  padding-bottom: 2px;
+  background-color: var(--color-primary);
+  padding: 12px 10px;
   text-align: center;
   color: var(--color-light);
 }
 
-.header h1 {
-  font-size: var(--font-size-h1);
-}
-
-/* Top Navigation (Flexbox) */
-.topnav {
+/* Main Navigation */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
   background-color: var(--color-primary);
-  overflow: visible;
 }
 
-.topnav a {
+li {
+  position: relative;
+}
+
+li.right {
+  margin-left: auto;
+}
+
+li a,
+.dropbtn {
   display: block;
   color: var(--color-light);
   text-align: center;
@@ -155,17 +160,48 @@ h4 a:hover {
   text-decoration: none;
 }
 
-.topnav a:visited {
-  color: var(--color-light);
+li a:hover,
+.dropdown:hover .dropbtn,
+li a:focus-visible {
+  color: var(--color-primary-hover);
+  background-color: var(--color-light);
 }
 
-.topnav a:hover,
-.topnav a:focus-visible {
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
   background-color: var(--color-light);
+  min-width: 220px;
+  box-shadow: 0 15px 16px 0 var(--color-shadow);
+  z-index: 20;
+}
+
+.dropdown-content a {
+  color: var(--color-dropdown-text);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus-visible {
+  background-color: var(--color-bg);
   color: var(--color-primary-hover);
 }
 
-/* Main content rows & columns (Flexbox) */
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* Rows & Columns */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -197,99 +233,97 @@ h4 a:hover {
   max-width: 55%;
 }
 
-/* Dropdown Navigation */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Section titles & content blocks */
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.content-block {
+  background-color: var(--color-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   display: flex;
   flex-wrap: wrap;
-  background-color: var(--color-primary);
+  gap: var(--spacing-md);
+  align-items: center;
 }
 
-li {
-  position: relative;
+.content-block .column {
+  background-color: transparent;
+  padding: var(--spacing-sm);
 }
 
-li.right {
-  margin-left: auto;
-}
-
-li a,
-.dropbtn {
-  display: inline-block;
-  color: var(--color-light);
+.content-block h3 {
   text-align: center;
-  padding: var(--nav-padding);
-  text-decoration: none;
+  margin: 0;
 }
 
-li a:hover,
-.dropdown:hover .dropbtn,
-li a:focus-visible {
-  color: var(--color-primary-hover);
-  background-color: var(--color-light);
-}
-
-li.dropdown {
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--color-light);
-  min-width: 160px;
-  box-shadow: 0 15px 16px 0 var(--color-shadow);
-  z-index: 10;
-}
-
-.dropdown-content a {
-  color: var(--color-dropdown-text);
-  padding: 12px 16px;
-  text-decoration: none;
+.content-block img {
+  width: 100%;
+  height: auto;
   display: block;
-  text-align: left;
+  border-radius: 4px;
 }
 
-.dropdown-content a:hover,
-.dropdown-content a:focus-visible {
-  background-color: var(--color-bg);
+/* Bottom links */
+.bottom-section {
+  margin-top: 2.5rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent !important;
+  padding: var(--spacing-md) var(--spacing-lg);
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.footer-links li {
+  margin: 0;
+}
+
+.footer-links a {
+  color: var(--color-link);
+  padding: 0;
+  display: inline;
+}
+
+.footer-links a:hover {
   color: var(--color-primary-hover);
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: block;
+  background-color: transparent;
 }
 
 /* Footer */
 .footer {
   width: 100%;
-  padding: var(--spacing-xs);
+  padding: 10px 16px;
   background-color: var(--color-footer);
   color: var(--color-footer-text);
   text-align: right;
+  font-size: 14px;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
+/* ========== MOBILE RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
   .row {
-    flex-direction: column;
-    padding: var(--spacing-sm);
+    padding: 12px;
+    gap: 12px;
   }
 
-  .column,
-  .column.dark,
   .column.side,
   .column.main {
     flex: 1 1 100%;
     max-width: 100%;
   }
 
-  .topnav,
+  .content-block {
+    flex-direction: column;
+  }
+
+  /* Make navigation stack nicely */
   ul {
     flex-direction: column;
   }
@@ -298,9 +332,48 @@ li.dropdown {
     margin-left: 0;
   }
 
+  li a,
+  .dropbtn {
+    text-align: left;
+    padding: 14px 20px;
+  }
+
   .dropdown-content {
     position: static;
     box-shadow: none;
     width: 100%;
+    min-width: 100%;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .dropdown-content a {
+    padding-left: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px 8px;
+  }
+
+  .title {
+    font-size: clamp(24px, 8vw, 36px);
+  }
+
+  .row {
+    padding: 10px;
+  }
+
+  .column {
+    padding: 12px;
+  }
+
+  .content-block {
+    padding: 12px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 13px;
   }
 }

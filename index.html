@@ -1,77 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <script data-ad-client="ca-pub-9547540451768383" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <link href="derekverbrugge.css" rel="stylesheet">
-  <title>DerekVerbrugge.com</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Derek Verbrugge — Software, Art & Design</title>
+<style>
+:root{--bg:#f3f1e8;--panel:#fffdf7;--ink:#17231d;--muted:#68736b;--green:#174d38;--green2:#286b4d;--orange:#d66b32;--line:#d7ddd3}
+:root:has(#night:checked){--bg:#101713;--panel:#17221b;--ink:#f1f3e9;--muted:#aeb9ae;--green:#8bc7a2;--green2:#b0e2bd;--orange:#f29a58;--line:#33443a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Arial,Helvetica,sans-serif}a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{min-height:74px;display:flex;justify-content:space-between;align-items:center;gap:20px}.logo{font-size:1.25rem;font-weight:900;letter-spacing:-.06em;text-decoration:none}.logo b{color:var(--orange)}nav{display:flex;gap:20px;flex-wrap:wrap;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}nav a{text-decoration:none}
+.toggle{display:inline-flex;align-items:center;gap:7px;font-size:.75rem;font-weight:800;text-transform:uppercase;cursor:pointer}.toggle input{accent-color:var(--orange)}
+.hero{padding:110px 0 100px;background:linear-gradient(135deg,transparent 0 65%,color-mix(in srgb,var(--green) 13%,transparent) 65%)}.eyebrow{color:var(--orange);font-size:.8rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;margin:0 0 20px}
+h1{font-size:clamp(3.4rem,9vw,8rem);line-height:.9;letter-spacing:-.09em;margin:0;max-width:900px}h1 span{color:var(--green2)}.lead{max-width:650px;color:var(--muted);font-size:1.2rem;margin:30px 0}.buttons{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 18px;border:1px solid var(--ink);text-decoration:none;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}
+section{padding:82px 0;border-top:1px solid var(--line)}.heading{display:grid;grid-template-columns:1fr 2fr;gap:30px;margin-bottom:35px}h2{font-size:clamp(2.1rem,5vw,4.5rem);line-height:1;letter-spacing:-.07em;margin:0}.heading p,.copy{color:var(--muted);max-width:650px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);padding:25px;min-height:245px;display:flex;flex-direction:column;justify-content:flex-end}.num{color:var(--orange);font-weight:900;font-size:.78rem}.card h3{margin:38px 0 8px;font-size:1.35rem;letter-spacing:-.04em}.card p{color:var(--muted);margin:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px}.facts{border-top:1px solid var(--line)}.fact{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.9rem}.fact span{color:var(--muted);text-align:right}
+.contact{background:var(--green);color:#fff}.contact .eyebrow{color:#ffd0a5}.contact .copy{color:#d8e6dc}.contact .btn{border-color:#fff}.contact .btn.primary{background:#fff;color:var(--green)}
+footer{padding:28px 0;color:var(--muted);font-size:.8rem}footer .wrap{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column;padding:18px 0}.hero{padding:80px 0}.heading,.about{grid-template-columns:1fr;gap:18px}.grid{grid-template-columns:1fr}.card{min-height:190px}footer .wrap{flex-direction:column}}
+
+/* Right-aligned horizontal night-mode slider */
+.theme-toggle {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  cursor: pointer;
+  user-select: none;
+}
+.theme-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.theme-label {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.slider {
+  position: relative;
+  display: inline-block;
+  width: 3.25rem;
+  height: 1.7rem;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  transition: background .2s ease, border-color .2s ease;
+}
+.slider::after {
+  content: "";
+  position: absolute;
+  top: .2rem;
+  left: .2rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 50%;
+  background: currentColor;
+  transition: transform .2s ease;
+}
+.theme-toggle input:checked + .slider::after {
+  transform: translateX(1.5rem);
+}
+@media (max-width: 600px) {
+  .theme-toggle {
+    top: .8rem;
+    right: .8rem;
+  }
+  .theme-label {
+    display: none;
+  }
+}
+
+</style>
 </head>
 <body>
-
-  <!-- Header -->
-  <div class="header">
-    <p class="title"><b><a href="https://derekverbrugge.com">DerekVerbrugge.com</a></b></p>
-  </div>
-
-  <!-- Main Navigation -->
-  <ul>
-    <li><a href="https://derekverbrugge.com">Home</a></li>
-    <li class="dropdown">
-      <a href="https://derekverbrugge.com/about.html" class="dropbtn">About</a>
-      <div class="dropdown-content">
-        <a href="https://derekverbrugge.com/software-and-digital-assets.html">Software and Digital Assets</a>
-        <a href="https://derekverbrugge.com/fine-art.html">Fine Art</a>
-      </div>
-    </li>
-    <li class="right"><a href="https://derekverbrugge.com/contact">Contact</a></li>
-  </ul>
-
-  <!-- Main Content -->
-  <div class="row">
-
-    <!-- Digital Artwork Section -->
-    <div class="column">
-      <h2 class="section-title"><a href="https://derekverbrugge.com/software-and-digital-assets.html">Digital Artwork</a></h2>
-      
-      <div class="row content-block">
-        <div class="column main">
-          <h3>Accurate and Highly Detailed</h3>
-        </div>
-        <div class="column side">
-          <img src="https://i.imgur.com/OA4sxCc.png" alt="Flightgear digital artwork" style="width:100%; height:auto;">
-        </div>
-      </div>
-    </div>
-
-    <!-- Fine Art Section -->
-    <div class="column">
-      <h2 class="section-title"><a href="https://derekverbrugge.com/fine-art.html">Fine Art</a></h2>
-      
-      <div class="row content-block">
-        <div class="column side">
-          <img src="https://i.imgur.com/DN0aOzh.jpg" alt="Fine art example" style="width:100%; height:auto;">
-        </div>
-        <div class="column main">
-          <h3>Accurate and Highly Detailed</h3>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Bottom Links + Footer -->
-  <div class="bottom-section">
-    <ul class="footer-links">
-      <li><a href="https://derekverbrugge.com">Home</a></li>
-      <li><a href="https://derekverbrugge.com/about.html">About</a></li>
-      <li><a href="https://derekverbrugge.com/contact">Contact</a></li>
-    </ul>
-
-    <div class="footer">
-      Copyright © 2020 Derek Verbrugge - All Rights Reserved
-    </div>
-  </div>
-
-</body>
-</html>
+<header><div class="wrap nav"><a class="logo" href="#">Derek<b>Verbrugge</b></a><nav><a href="#work">Work</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></nav><label class="toggle"><input id="night" type="checkbox" checked> Night mode</label></div></header>
+<main>
+<section class="hero"><div class="wrap"><p class="eyebrow">Software · Simulation · Digital Art · Fine Art</p><h1>Technical detail.<br><span>Visual craft.</span></h1><p class="lead">A condensed portfolio of software development, web work, simulation projects, vehicle and aircraft artwork, and realistic pencil drawing.</p><div class="buttons"><a class="btn primary" href="#work">Explore the work</a><a class="btn" href="#contact">Get in touch</a></div></div></section>
+<section id="work"><div class="wrap"><div class="heading"><h2>Selected<br>work.</h2><p>This single-page portfolio brings together the major categories represented across the original site: digital assets, game and simulation work, web development, and traditional art. Image links are intentionally omitted so the page does not depend on unavailable Imgur assets.</p></div><div class="grid">
+<article class="card"><span class="num">01 / FLIGHTGEAR</span><h3>Aircraft & Digital Assets</h3><p>Reflections, corrected model normals, and custom liveries for the Embraer E-Jet project.</p></article>
+<article class="card"><span class="num">02 / TRAIN SIM WORLD</span><h3>Railway Designs</h3><p>Custom locomotive and rolling-stock designs created for Train Sim World’s Creator’s Club.</p></article>
+<article class="card"><span class="num">03 / FORZA HORIZON</span><h3>Realistic Liveries</h3><p>Detailed automotive graphics and recreations developed under the Kafovofa gamertag.</p></article>
+<article class="card"><span class="num">04 / WEB DEVELOPMENT</span><h3>Websites & Interfaces</h3><p>Responsive websites, WordPress work, front-end development, and practical digital experiences.</p></article>
+<article class="card"><span class="num">05 / SOFTWARE</span><h3>Code & Experiments</h3><p>Software development, game development, embedded systems, cybersecurity, and technical experimentation.</p></article>
+<article class="card"><span class="num">06 / FINE ART</span><h3>Pencil Drawing</h3><p>Realistic traditional artwork with an emphasis on observation, proportion, and fine detail.</p></article>
+</div></div></section>
+<section id="skills"><div class="wrap"><div class="heading"><h2>Tools &<br>interests.</h2><p>Experience spans creative production and engineering-oriented work, with a focus on making complicated things approachable and useful.</p></div><div class="grid">
+<article class="card"><span class="num">CREATIVE</span><h3>GIMP · Blender · Digital Art</h3><p>Aircraft textures, vehicle graphics, visual design, and image editing.</p></article>
+<article class="card"><span class="num">ENGINEERING</span><h3>Haskell · TinyRAM · Linux</h3><p>Programming, testing, embedded concepts, and systems-oriented problem solving.</p></article>
+<article class="card"><span class="num">WEB</span><h3>HTML · CSS · JavaScript · WordPress</h3><p>Simple, maintainable websites and user-focused digital experiences.</p></article>
+</div></div></section>
+<section id="about"><div class="wrap about"><div><p class="eyebrow">About</p><h2>A broad technical and creative practice.</h2></div><div><p class="copy">I work across software, web development, digital art, simulation, and traditional drawing. My portfolio reflects an interest in accurate models, clear interfaces, and projects that combine practical engineering with visual communication.</p><div class="facts"><div class="fact"><strong>Location</strong><span>Manchester, New Hampshire</span></div><div class="fact"><strong>Education</strong><span>Computer engineering studies</span></div><div class="fact"><strong>Approach</strong><span>Precise, approachable, independent</span></div></div></div></div></section>
+<section id="contact" class="contact"><div class="wrap"><div class="heading"><h2>Let’s make<br>something.</h2><p class="copy">For software, web, design, simulation, or creative collaboration, get in touch.</p></div><div class="buttons"><a class="btn primary" href="mailto:derekverbrugge@gmail.com">Send an email</a><a class="btn" href="https://www.linkedin.com/in/derekverbrugge">LinkedIn</a></div></div></section>
+</main><footer><div class="wrap"><span>© 2026 Derek Verbrugge</span><span>Simple HTML + CSS · No external image dependencies</span></div></footer>
+</body></html>

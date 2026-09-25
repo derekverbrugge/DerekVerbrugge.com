@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+>
+
 <meta name="color-scheme" content="light dark">
 
 <meta
   name="description"
-  content="Derek Verbrugge is a digital designer and software developer specializing in marketing design, web development, digital content, branding, visual communication, and intuitive responsive experiences."
+  content="Derek Verbrugge is a digital designer and software developer specializing in marketing design, campaign strategy, web development, digital content, branding, and intuitive responsive experiences."
 >
 
 <meta
@@ -15,11 +20,14 @@
   content="Derek Verbrugge, digital designer, marketing design, marketing strategy, campaign design, web developer, graphic design, branding, digital content, JavaScript, WordPress, responsive web design, software development"
 >
 
-<meta name="author" content="Derek Verbrugge">
+<meta
+  name="author"
+  content="Derek Verbrugge"
+>
 
 <meta
   property="og:title"
-  content="Derek Verbrugge — Digital Design, Marketing & Web Development"
+  content="Derek Verbrugge | Digital Design, Marketing & Web Development"
 >
 
 <meta
@@ -27,7 +35,10 @@
   content="Digital design, marketing strategy, web development, branding, and creative technology focused on clean, concise, responsive, and intuitive experiences."
 >
 
-<meta property="og:type" content="website">
+<meta
+  property="og:type"
+  content="website"
+>
 
 <title>
   Derek Verbrugge | Digital Design, Marketing & Web Development
@@ -35,6 +46,10 @@
 
 
 <style>
+
+/* =========================================
+   ROOT
+========================================= */
 
 :root{
   --bg:#f3f1e8;
@@ -58,6 +73,11 @@
   --line:#33443a;
 }
 
+
+/* =========================================
+   GLOBAL
+========================================= */
+
 *{
   box-sizing:border-box;
 }
@@ -68,28 +88,45 @@ html{
 
 body{
   margin:0;
+
   background:var(--bg);
   color:var(--ink);
-  font:16px/1.6 Arial,Helvetica,sans-serif;
+
+  font:
+    16px/1.6
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 a{
   color:inherit;
 }
 
+button,
+a{
+  -webkit-tap-highlight-color:transparent;
+}
+
 .wrap{
-  width:min(1120px,calc(100% - 40px));
+  width:min(
+    1120px,
+    calc(100% - 40px)
+  );
+
   margin:auto;
 }
 
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 header{
   position:sticky;
+
   top:0;
+
   z-index:5;
 
   background:color-mix(
@@ -107,7 +144,9 @@ header{
   min-height:74px;
 
   display:flex;
+
   justify-content:space-between;
+
   align-items:center;
 
   gap:20px;
@@ -115,8 +154,11 @@ header{
 
 .logo{
   font-size:1.25rem;
+
   font-weight:900;
+
   letter-spacing:-.06em;
+
   text-decoration:none;
 }
 
@@ -126,29 +168,45 @@ header{
 
 nav{
   display:flex;
+
   gap:20px;
+
   flex-wrap:wrap;
 
   font-size:.78rem;
+
   font-weight:800;
 
   text-transform:uppercase;
+
   letter-spacing:.08em;
 }
 
 nav a{
   text-decoration:none;
+
+  transition:
+    color .18s ease;
+}
+
+nav a:hover,
+nav a:focus-visible{
+  color:var(--orange);
 }
 
 .toggle{
   display:inline-flex;
+
   align-items:center;
+
   gap:7px;
 
   font-size:.75rem;
+
   font-weight:800;
 
   text-transform:uppercase;
+
   cursor:pointer;
 }
 
@@ -157,9 +215,9 @@ nav a{
 }
 
 
-/* =========================
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .hero{
   padding:110px 0 100px;
@@ -180,21 +238,30 @@ nav a{
   color:var(--orange);
 
   font-size:.8rem;
+
   font-weight:900;
 
   letter-spacing:.18em;
+
   text-transform:uppercase;
 
   margin:0 0 20px;
 }
 
 h1{
-  font-size:clamp(3.4rem,9vw,8rem);
+  font-size:
+    clamp(
+      3.4rem,
+      9vw,
+      8rem
+    );
+
   line-height:.9;
 
   letter-spacing:-.09em;
 
   margin:0;
+
   max-width:1000px;
 }
 
@@ -214,22 +281,36 @@ h1 span{
 
 .buttons{
   display:flex;
+
   gap:12px;
+
   flex-wrap:wrap;
 }
 
 .btn{
+  display:inline-block;
+
   padding:12px 18px;
 
   border:1px solid var(--ink);
 
+  background:transparent;
+
+  color:inherit;
+
+  font-family:inherit;
+
   text-decoration:none;
 
   font-size:.78rem;
+
   font-weight:900;
 
   text-transform:uppercase;
+
   letter-spacing:.08em;
+
+  cursor:pointer;
 
   transition:
     background .18s ease,
@@ -245,24 +326,28 @@ h1 span{
 
 .btn.primary{
   background:var(--green);
+
   color:#fff;
+
   border-color:var(--green);
 }
 
 
-/* =========================
+/* =========================================
    SECTIONS
-========================= */
+========================================= */
 
 section{
   padding:82px 0;
+
   border-top:1px solid var(--line);
 }
 
 .heading{
   display:grid;
 
-  grid-template-columns:1fr 2fr;
+  grid-template-columns:
+    1fr 2fr;
 
   gap:30px;
 
@@ -270,7 +355,12 @@ section{
 }
 
 h2{
-  font-size:clamp(2.1rem,5vw,4.5rem);
+  font-size:
+    clamp(
+      2.1rem,
+      5vw,
+      4.5rem
+    );
 
   line-height:1;
 
@@ -282,22 +372,111 @@ h2{
 .heading p,
 .copy{
   color:var(--muted);
+
   max-width:700px;
 }
 
 
-/* =========================
-   PROJECT CARDS
-========================= */
+/* =========================================
+   SELECTED WORK
+========================================= */
 
-.grid{
+.work-grid{
   display:grid;
 
   grid-template-columns:
-    repeat(3,1fr);
+    repeat(3, 1fr);
 
   gap:16px;
 }
+
+
+/*
+  The second row starts with the fourth card.
+
+  It is visually hidden and collapsed until
+  .work-grid.is-expanded is added by JavaScript.
+*/
+
+.work-card.hidden-work{
+  max-height:0;
+
+  min-height:0;
+
+  height:0;
+
+  padding-top:0;
+
+  padding-bottom:0;
+
+  border-width:0;
+
+  opacity:0;
+
+  overflow:hidden;
+
+  transform:
+    translateY(-20px)
+    scale(.98);
+
+  pointer-events:none;
+
+  transition:
+    max-height .55s ease,
+    height .55s ease,
+    min-height .55s ease,
+    padding .55s ease,
+    border-width .35s ease,
+    opacity .35s ease,
+    transform .55s ease;
+}
+
+
+/*
+  Expanded state.
+*/
+
+.work-grid.is-expanded .work-card.hidden-work{
+  max-height:500px;
+
+  min-height:245px;
+
+  height:auto;
+
+  padding:25px;
+
+  border-width:1px;
+
+  opacity:1;
+
+  overflow:visible;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  pointer-events:auto;
+}
+
+
+/*
+  Slightly stagger the second row.
+*/
+
+.work-grid.is-expanded
+.work-card.hidden-work:nth-child(4){
+  transition-delay:.05s;
+}
+
+.work-grid.is-expanded
+.work-card.hidden-work:nth-child(5){
+  transition-delay:.12s;
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
 
 .card{
   position:relative;
@@ -311,7 +490,9 @@ h2{
   min-height:245px;
 
   display:flex;
+
   flex-direction:column;
+
   justify-content:flex-end;
 
   text-decoration:none;
@@ -339,6 +520,7 @@ h2{
 
 .card:focus-visible{
   outline:3px solid var(--orange);
+
   outline-offset:3px;
 }
 
@@ -346,6 +528,7 @@ h2{
   color:var(--orange);
 
   font-weight:900;
+
   font-size:.78rem;
 }
 
@@ -359,6 +542,7 @@ h2{
 
 .card p{
   color:var(--muted);
+
   margin:0;
 }
 
@@ -368,22 +552,43 @@ h2{
   color:var(--green2);
 
   font-size:.72rem;
+
   font-weight:900;
 
   text-transform:uppercase;
+
   letter-spacing:.1em;
 }
 
 
-/* =========================
+/* =========================================
+   MORE WORK CONTROL
+========================================= */
+
+.more-work{
+  display:flex;
+
+  justify-content:center;
+
+  margin-top:28px;
+}
+
+.more-work .btn{
+  min-width:150px;
+
+  text-align:center;
+}
+
+
+/* =========================================
    SERVICES
-========================= */
+========================================= */
 
 .services{
   display:grid;
 
   grid-template-columns:
-    repeat(4,1fr);
+    repeat(4, 1fr);
 
   gap:16px;
 }
@@ -411,14 +616,15 @@ h2{
 }
 
 
-/* =========================
+/* =========================================
    ABOUT
-========================= */
+========================================= */
 
 .about{
   display:grid;
 
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:
+    1fr 1fr;
 
   gap:60px;
 }
@@ -445,16 +651,18 @@ h2{
 
 .fact span{
   color:var(--muted);
+
   text-align:right;
 }
 
 
-/* =========================
+/* =========================================
    CONTACT
-========================= */
+========================================= */
 
 .contact{
   background:var(--green);
+
   color:#fff;
 }
 
@@ -472,13 +680,14 @@ h2{
 
 .contact .btn.primary{
   background:#fff;
+
   color:var(--green);
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer{
   padding:28px 0;
@@ -499,69 +708,15 @@ footer .wrap{
 }
 
 
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:900px){
-
-  .grid{
-    grid-template-columns:
-      repeat(2,1fr);
-  }
-
-  .services{
-    grid-template-columns:
-      repeat(2,1fr);
-  }
-}
-
-@media(max-width:760px){
-
-  .nav{
-    align-items:flex-start;
-
-    flex-direction:column;
-
-    padding:18px 0;
-  }
-
-  .hero{
-    padding:80px 0;
-  }
-
-  .heading,
-  .about{
-    grid-template-columns:1fr;
-    gap:18px;
-  }
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .card{
-    min-height:190px;
-  }
-
-  .services{
-    grid-template-columns:1fr;
-  }
-
-  footer .wrap{
-    flex-direction:column;
-  }
-}
-
-
-/* =========================
+/* =========================================
    NIGHT MODE
-========================= */
+========================================= */
 
 .theme-toggle{
   position:fixed;
 
   top:1.25rem;
+
   right:1.25rem;
 
   z-index:1000;
@@ -601,6 +756,7 @@ footer .wrap{
   display:inline-block;
 
   width:3.25rem;
+
   height:1.7rem;
 
   border:2px solid currentColor;
@@ -614,32 +770,140 @@ footer .wrap{
   position:absolute;
 
   top:.2rem;
+
   left:.2rem;
 
   width:1.05rem;
+
   height:1.05rem;
 
   border-radius:50%;
 
   background:currentColor;
 
-  transition:transform .2s ease;
+  transition:
+    transform .2s ease;
 }
 
-.theme-toggle input:checked + .slider::after{
+.theme-toggle input:checked
++ .slider::after{
   transform:translateX(1.5rem);
 }
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media(
+  prefers-reduced-motion:reduce
+){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    transition-duration:.01ms !important;
+
+    animation-duration:.01ms !important;
+
+    animation-iteration-count:1 !important;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:900px){
+
+  .work-grid{
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .services{
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:760px){
+
+  .nav{
+    align-items:flex-start;
+
+    flex-direction:column;
+
+    padding:18px 0;
+  }
+
+  .hero{
+    padding:80px 0;
+  }
+
+  .heading,
+  .about{
+    grid-template-columns:1fr;
+
+    gap:18px;
+  }
+
+  .work-grid{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    min-height:190px;
+  }
+
+  /*
+    On mobile the hidden cards still expand
+    naturally to the full width.
+  */
+
+  .work-grid.is-expanded
+  .work-card.hidden-work{
+    min-height:190px;
+  }
+
+  .services{
+    grid-template-columns:1fr;
+  }
+
+  footer .wrap{
+    flex-direction:column;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
 @media(max-width:600px){
 
   .theme-toggle{
     top:.8rem;
+
     right:.8rem;
   }
 
   .theme-label{
     display:none;
   }
+
 }
 
 </style>
@@ -649,17 +913,21 @@ footer .wrap{
 <body>
 
 
-<!-- =========================
+<!-- =========================================
      HEADER
-========================= -->
+========================================= -->
 
 <header>
 
   <div class="wrap nav">
 
-    <a class="logo" href="#">
+    <a
+      class="logo"
+      href="#"
+    >
       Derek<b>Verbrugge</b>
     </a>
+
 
     <nav aria-label="Primary navigation">
 
@@ -681,6 +949,7 @@ footer .wrap{
 
     </nav>
 
+
     <label class="toggle">
 
       <input
@@ -701,9 +970,9 @@ footer .wrap{
 <main>
 
 
-<!-- =========================
+<!-- =========================================
      HERO
-========================= -->
+========================================= -->
 
 <section class="hero">
 
@@ -713,17 +982,21 @@ footer .wrap{
       Digital Marketing · Design · Web Development
     </p>
 
+
     <h1>
       Strategy meets<br>
       <span>creative technology.</span>
     </h1>
 
+
     <p class="lead">
-      I create clean, concise, responsive digital experiences
-      that help ideas communicate clearly. My work combines
-      marketing campaign strategy, visual design, web development,
-      branding, digital content, and software.
+      I create clean, concise, responsive digital
+      experiences that help ideas communicate clearly.
+      My work combines marketing campaign strategy,
+      visual design, web development, branding,
+      digital content, and software.
     </p>
+
 
     <div class="buttons">
 
@@ -731,14 +1004,14 @@ footer .wrap{
         class="btn primary"
         href="#contact"
       >
-        Start a project
+        Start a Project
       </a>
 
       <a
         class="btn"
         href="#work"
       >
-        View my work
+        View My Work
       </a>
 
     </div>
@@ -748,13 +1021,14 @@ footer .wrap{
 </section>
 
 
-<!-- =========================
-     WORK
-========================= -->
+<!-- =========================================
+     SELECTED WORK
+========================================= -->
 
 <section id="work">
 
   <div class="wrap">
+
 
     <div class="heading">
 
@@ -763,19 +1037,28 @@ footer .wrap{
         work.
       </h2>
 
+
       <p>
-        Explore projects spanning web development, digital
-        design, simulation, software, and fine art. I approach
-        every project with an emphasis on clear communication,
-        thoughtful visual design, technical accuracy, and a
+        Explore projects spanning web development,
+        digital design, simulation, software, and
+        fine art. I approach every project with an
+        emphasis on clear communication, thoughtful
+        visual design, technical accuracy, and a
         strong user experience.
       </p>
 
     </div>
 
 
-    <div class="grid">
+    <div
+      class="work-grid"
+      id="workGrid"
+    >
 
+
+      <!-- =====================================
+           PROJECT 1
+      ====================================== -->
 
       <a
         class="card"
@@ -788,9 +1071,11 @@ footer .wrap{
           WEB DEVELOPMENT
         </span>
 
+
         <h3>
           Websites & Digital Experiences
         </h3>
+
 
         <p>
           Responsive websites, front-end development,
@@ -798,12 +1083,17 @@ footer .wrap{
           designed for clarity and usability.
         </p>
 
+
         <span class="visit">
           View on GitHub ↗
         </span>
 
       </a>
 
+
+      <!-- =====================================
+           PROJECT 2
+      ====================================== -->
 
       <a
         class="card"
@@ -816,9 +1106,11 @@ footer .wrap{
           TRAIN SIM WORLD
         </span>
 
+
         <h3>
           Railway Design & Simulation
         </h3>
+
 
         <p>
           Custom locomotive and rolling-stock designs
@@ -826,12 +1118,17 @@ footer .wrap{
           and digital content creation.
         </p>
 
+
         <span class="visit">
-          View project history ↗
+          View Project History ↗
         </span>
 
       </a>
 
+
+      <!-- =====================================
+           PROJECT 3
+      ====================================== -->
 
       <a
         class="card"
@@ -844,15 +1141,18 @@ footer .wrap{
           FLIGHTGEAR
         </span>
 
+
         <h3>
           Aircraft Design & Digital Assets
         </h3>
 
+
         <p>
-          Aircraft liveries, digital assets, model refinement,
-          reflections, and corrected model normals for
-          an Embraer E-Jet project.
+          Aircraft liveries, digital assets, model
+          refinement, reflections, and corrected model
+          normals for an Embraer E-Jet project.
         </p>
+
 
         <span class="visit">
           View on GitHub ↗
@@ -861,20 +1161,28 @@ footer .wrap{
       </a>
 
 
+      <!-- =====================================
+           PROJECT 4 — HIDDEN INITIALLY
+      ====================================== -->
+
       <a
-        class="card"
+        class="card work-card hidden-work"
         href="https://github.com/derekverbrugge"
         target="_blank"
         rel="noopener noreferrer"
+        aria-hidden="true"
+        tabindex="-1"
       >
 
         <span class="num">
           SOFTWARE
         </span>
 
+
         <h3>
           Software & Technical Projects
         </h3>
+
 
         <p>
           Software development, game development,
@@ -882,6 +1190,7 @@ footer .wrap{
           and technical problem-solving.
         </p>
 
+
         <span class="visit">
           View on GitHub ↗
         </span>
@@ -889,20 +1198,28 @@ footer .wrap{
       </a>
 
 
+      <!-- =====================================
+           PROJECT 5 — HIDDEN INITIALLY
+      ====================================== -->
+
       <a
-        class="card"
+        class="card work-card hidden-work"
         href="https://www.artstation.com/derekverbrugge5/albums/5437591"
         target="_blank"
         rel="noopener noreferrer"
+        aria-hidden="true"
+        tabindex="-1"
       >
 
         <span class="num">
           FINE ART
         </span>
 
+
         <h3>
           Traditional & Digital Art
         </h3>
+
 
         <p>
           Realistic artwork focused on observation,
@@ -910,11 +1227,31 @@ footer .wrap{
           and disciplined craftsmanship.
         </p>
 
+
         <span class="visit">
-          View artwork on ArtStation ↗
+          View Artwork on ArtStation ↗
         </span>
 
       </a>
+
+    </div>
+
+
+    <!-- =====================================
+         MORE WORK BUTTON
+    ====================================== -->
+
+    <div class="more-work">
+
+      <button
+        class="btn"
+        id="moreWorkButton"
+        type="button"
+        aria-expanded="false"
+        aria-controls="workGrid"
+      >
+        More Work
+      </button>
 
     </div>
 
@@ -923,13 +1260,14 @@ footer .wrap{
 </section>
 
 
-<!-- =========================
+<!-- =========================================
      SERVICES
-========================= -->
+========================================= -->
 
 <section id="services">
 
   <div class="wrap">
+
 
     <div class="heading">
 
@@ -938,11 +1276,12 @@ footer .wrap{
         contribute.
       </h2>
 
+
       <p>
         I am interested in collaborating with businesses,
-        organizations, agencies, entrepreneurs, and creative
-        teams that need thoughtful marketing, design, web,
-        or digital production support.
+        organizations, agencies, entrepreneurs, and
+        creative teams that need thoughtful marketing,
+        design, web, or digital production support.
       </p>
 
     </div>
@@ -974,8 +1313,8 @@ footer .wrap{
 
         <p>
           Branding, digital graphics, campaign assets,
-          visual systems, presentations, and creative
-          content designed for consistent communication.
+          presentations, and creative content designed
+          for consistent communication.
         </p>
 
       </article>
@@ -1017,13 +1356,14 @@ footer .wrap{
 </section>
 
 
-<!-- =========================
+<!-- =========================================
      DESIGN PHILOSOPHY
-========================= -->
+========================================= -->
 
 <section>
 
   <div class="wrap">
+
 
     <div class="heading">
 
@@ -1031,6 +1371,7 @@ footer .wrap{
         My design<br>
         philosophy.
       </h2>
+
 
       <p>
         Good design should communicate before it needs
@@ -1108,19 +1449,21 @@ footer .wrap{
 </section>
 
 
-<!-- =========================
+<!-- =========================================
      ABOUT
-========================= -->
+========================================= -->
 
 <section id="about">
 
   <div class="wrap about">
+
 
     <div>
 
       <p class="eyebrow">
         About Derek
       </p>
+
 
       <h2>
         Creative thinking
@@ -1140,6 +1483,7 @@ footer .wrap{
         and traditional art.
       </p>
 
+
       <p class="copy">
         I study marketing campaign strategies and design
         to better understand how creative work connects
@@ -1148,6 +1492,7 @@ footer .wrap{
         technical foundation for working with software,
         websites, systems, and emerging technology.
       </p>
+
 
       <p class="copy">
         I am particularly interested in projects where
@@ -1160,6 +1505,7 @@ footer .wrap{
 
 
       <div class="facts">
+
 
         <div class="fact">
 
@@ -1221,9 +1567,9 @@ footer .wrap{
 </section>
 
 
-<!-- =========================
+<!-- =========================================
      CONTACT
-========================= -->
+========================================= -->
 
 <section
   id="contact"
@@ -1232,12 +1578,14 @@ footer .wrap{
 
   <div class="wrap">
 
+
     <div class="heading">
 
       <h2>
         Have a project<br>
         in mind?
       </h2>
+
 
       <p class="copy">
         I am available for creative collaboration,
@@ -1263,7 +1611,7 @@ footer .wrap{
         class="btn primary"
         href="mailto:derekverbrugge@gmail.com"
       >
-        Discuss a project
+        Discuss a Project
       </a>
 
 
@@ -1285,9 +1633,9 @@ footer .wrap{
 </main>
 
 
-<!-- =========================
+<!-- =========================================
      FOOTER
-========================= -->
+========================================= -->
 
 <footer>
 
@@ -1296,7 +1644,7 @@ footer .wrap{
     <span id="copyright"></span>
 
     <span>
-      Digital design · Marketing · Web development · Creative technology
+      Digital Design · Marketing · Web Development · Creative Technology
     </span>
 
   </div>
@@ -1304,13 +1652,78 @@ footer .wrap{
 </footer>
 
 
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
 <script>
+
+/* =========================================
+   CURRENT YEAR
+========================================= */
 
 const currentYear =
   new Date().getFullYear();
 
-document.getElementById("copyright").textContent =
-  `© ${currentYear} Derek Verbrugge`;
+document
+  .getElementById("copyright")
+  .textContent =
+    `© ${currentYear} Derek Verbrugge`;
+
+
+/* =========================================
+   MORE WORK
+========================================= */
+
+const workGrid =
+  document.getElementById("workGrid");
+
+const moreWorkButton =
+  document.getElementById("moreWorkButton");
+
+const hiddenWork =
+  document.querySelectorAll(".hidden-work");
+
+
+moreWorkButton.addEventListener(
+  "click",
+  () => {
+
+    const expanded =
+      workGrid.classList.toggle(
+        "is-expanded"
+      );
+
+
+    moreWorkButton.setAttribute(
+      "aria-expanded",
+      expanded
+    );
+
+
+    hiddenWork.forEach(
+      (card) => {
+
+        card.setAttribute(
+          "aria-hidden",
+          !expanded
+        );
+
+
+        card.tabIndex =
+          expanded ? 0 : -1;
+
+      }
+    );
+
+
+    moreWorkButton.textContent =
+      expanded
+        ? "Show Less"
+        : "More Work";
+
+  }
+);
 
 </script>
 

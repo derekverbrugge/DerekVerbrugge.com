@@ -1,1 +1,1370 @@
 
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <meta
+    name="description"
+    content="Support Derek's Rent and Work Recovery Fund after a serious back injury and loss of transportation left him unable to work and struggling to cover rent and bills."
+  >
+
+  <meta
+    property="og:title"
+    content="Derek's Rent & Work Recovery Fund"
+  >
+
+  <meta
+    property="og:description"
+    content="Support Derek's Rent and Work Recovery Fund."
+  >
+
+  <meta property="og:type" content="website">
+
+  <title>Derek's Rent & Work Recovery Fund | Derek Verbrugge</title>
+
+  <style>
+
+    /* =========================================
+       ROOT
+    ========================================= */
+
+    :root{
+      --bg:#f3f1e8;
+      --panel:#fffdf7;
+      --ink:#17231d;
+      --muted:#68736b;
+      --green:#174d38;
+      --green2:#286b4d;
+      --orange:#d66b32;
+      --line:#d7ddd3;
+      --cream:#ffdcbf;
+    }
+
+    :root:has(#night:checked){
+      --bg:#101713;
+      --panel:#17221b;
+      --ink:#f1f3e9;
+      --muted:#aeb9ae;
+      --green:#8bc7a2;
+      --green2:#b0e2bd;
+      --orange:#f29a58;
+      --line:#33443a;
+      --cream:#432a1d;
+    }
+
+
+    /* =========================================
+       GLOBAL
+    ========================================= */
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+
+      font:
+        16px/1.65
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+    a{
+      color:inherit;
+    }
+
+    .wrap{
+      width:min(
+        1120px,
+        calc(100% - 40px)
+      );
+
+      margin:auto;
+    }
+
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    header{
+      position:sticky;
+
+      top:0;
+
+      z-index:10;
+
+      background:color-mix(
+        in srgb,
+        var(--bg) 92%,
+        transparent
+      );
+
+      backdrop-filter:blur(10px);
+
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      min-height:74px;
+
+      display:flex;
+
+      justify-content:space-between;
+
+      align-items:center;
+
+      gap:20px;
+    }
+
+    .logo{
+      font-size:1.25rem;
+
+      font-weight:900;
+
+      letter-spacing:-.06em;
+
+      text-decoration:none;
+    }
+
+    .logo b{
+      color:var(--orange);
+    }
+
+    nav{
+      display:flex;
+
+      gap:20px;
+
+      flex-wrap:wrap;
+
+      align-items:center;
+
+      font-size:.78rem;
+
+      font-weight:800;
+
+      text-transform:uppercase;
+
+      letter-spacing:.08em;
+    }
+
+    nav a{
+      text-decoration:none;
+
+      transition:
+        color .18s ease;
+    }
+
+    nav a:hover,
+    nav a:focus-visible{
+      color:var(--orange);
+    }
+
+    .toggle{
+      display:inline-flex;
+
+      align-items:center;
+
+      gap:7px;
+
+      font-size:.75rem;
+
+      font-weight:800;
+
+      text-transform:uppercase;
+
+      cursor:pointer;
+    }
+
+    .toggle input{
+      accent-color:var(--orange);
+    }
+
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero{
+      position:relative;
+
+      overflow:hidden;
+
+      padding:100px 0 95px;
+
+      background:
+        linear-gradient(
+          135deg,
+          transparent 0 58%,
+          color-mix(
+            in srgb,
+            var(--green) 13%,
+            transparent
+          ) 58%
+        );
+    }
+
+    /*
+      Long diagonal lines echo the portfolio's
+      visual language and point toward the CTA.
+    */
+
+    .hero::after{
+      content:"";
+
+      position:absolute;
+
+      width:75vw;
+
+      height:1px;
+
+      right:-25vw;
+
+      bottom:28%;
+
+      background:
+        color-mix(
+          in srgb,
+          var(--green) 35%,
+          transparent
+        );
+
+      transform:rotate(-23deg);
+
+      transform-origin:center;
+
+      box-shadow:
+        0 34px 0
+        color-mix(
+          in srgb,
+          var(--green) 18%,
+          transparent
+        ),
+
+        0 68px 0
+        color-mix(
+          in srgb,
+          var(--green) 10%,
+          transparent
+        );
+
+      pointer-events:none;
+    }
+
+    .hero-content{
+      position:relative;
+
+      z-index:1;
+
+      max-width:900px;
+    }
+
+    .eyebrow{
+      color:var(--orange);
+
+      font-size:.8rem;
+
+      font-weight:900;
+
+      letter-spacing:.18em;
+
+      text-transform:uppercase;
+
+      margin:0 0 20px;
+    }
+
+    h1{
+      font-size:
+        clamp(
+          3rem,
+          8vw,
+          7rem
+        );
+
+      line-height:.9;
+
+      letter-spacing:-.09em;
+
+      margin:0;
+
+      max-width:900px;
+    }
+
+    h1 span{
+      color:var(--green2);
+    }
+
+    .lead{
+      max-width:720px;
+
+      color:var(--muted);
+
+      font-size:1.2rem;
+
+      margin:30px 0;
+    }
+
+    .buttons{
+      display:flex;
+
+      gap:12px;
+
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-block;
+
+      padding:13px 19px;
+
+      border:1px solid var(--ink);
+
+      background:transparent;
+
+      color:inherit;
+
+      font-family:inherit;
+
+      text-decoration:none;
+
+      font-size:.78rem;
+
+      font-weight:900;
+
+      text-transform:uppercase;
+
+      letter-spacing:.08em;
+
+      cursor:pointer;
+
+      transition:
+        background .18s ease,
+        color .18s ease,
+        border-color .18s ease,
+        transform .18s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible{
+      transform:translateY(-2px);
+    }
+
+    .btn.primary{
+      background:var(--orange);
+
+      color:#fff;
+
+      border-color:var(--orange);
+    }
+
+    .btn.green{
+      background:var(--green);
+
+      color:#fff;
+
+      border-color:var(--green);
+    }
+
+
+    /* =========================================
+       SECTIONS
+    ========================================= */
+
+    section{
+      padding:78px 0;
+
+      border-top:1px solid var(--line);
+    }
+
+    .heading{
+      display:grid;
+
+      grid-template-columns:
+        1fr 2fr;
+
+      gap:30px;
+
+      margin-bottom:35px;
+    }
+
+    h2{
+      font-size:
+        clamp(
+          2.1rem,
+          5vw,
+          4.5rem
+        );
+
+      line-height:1;
+
+      letter-spacing:-.07em;
+
+      margin:0;
+    }
+
+    .heading p,
+    .copy{
+      color:var(--muted);
+
+      max-width:720px;
+    }
+
+
+    /* =========================================
+       FUNDRAISER FEATURE
+    ========================================= */
+
+    .fundraiser{
+      display:grid;
+
+      grid-template-columns:
+        1.35fr .65fr;
+
+      gap:16px;
+
+      align-items:stretch;
+    }
+
+    .story{
+      background:var(--panel);
+
+      border:1px solid var(--line);
+
+      padding:32px;
+    }
+
+    .story h3{
+      margin:0 0 14px;
+
+      font-size:1.45rem;
+
+      letter-spacing:-.04em;
+    }
+
+    .story p{
+      margin:0 0 18px;
+
+      color:var(--muted);
+    }
+
+    .story p:last-child{
+      margin-bottom:0;
+    }
+
+
+    /* =========================================
+       SUPPORT CARD
+    ========================================= */
+
+    .support-card{
+      position:relative;
+
+      background:var(--green);
+
+      color:#fff;
+
+      padding:32px;
+
+      min-height:100%;
+
+      display:flex;
+
+      flex-direction:column;
+
+      justify-content:flex-end;
+
+      overflow:hidden;
+    }
+
+    .support-card::before{
+      content:"";
+
+      position:absolute;
+
+      width:160%;
+
+      height:1px;
+
+      right:-60%;
+
+      top:28%;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .22
+        );
+
+      transform:rotate(-25deg);
+    }
+
+    .support-card .label{
+      position:relative;
+
+      z-index:1;
+
+      color:#ffd0a5;
+
+      font-size:.72rem;
+
+      font-weight:900;
+
+      letter-spacing:.14em;
+
+      text-transform:uppercase;
+    }
+
+    .support-card h3{
+      position:relative;
+
+      z-index:1;
+
+      margin:12px 0 8px;
+
+      font-size:2.2rem;
+
+      line-height:1;
+
+      letter-spacing:-.06em;
+    }
+
+    .support-card p{
+      position:relative;
+
+      z-index:1;
+
+      color:#d8e6dc;
+
+      margin:0 0 22px;
+    }
+
+    .support-card .btn{
+      position:relative;
+
+      z-index:1;
+
+      align-self:flex-start;
+
+      background:#fff;
+
+      color:var(--green);
+
+      border-color:#fff;
+    }
+
+
+    /* =========================================
+       WHERE YOUR SUPPORT GOES
+    ========================================= */
+
+    .uses{
+      display:grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:16px;
+    }
+
+    .use{
+      border-top:3px solid var(--orange);
+
+      padding:20px 0 0;
+    }
+
+    .use h3{
+      margin:0 0 8px;
+
+      font-size:1.15rem;
+
+      letter-spacing:-.03em;
+    }
+
+    .use p{
+      margin:0;
+
+      color:var(--muted);
+
+      font-size:.95rem;
+    }
+
+
+    /* =========================================
+       SHARE NOTE
+    ========================================= */
+
+    .note{
+      border:1px solid var(--line);
+
+      background:var(--panel);
+
+      padding:25px;
+
+      color:var(--muted);
+    }
+
+    .note strong{
+      color:var(--ink);
+    }
+
+
+    /* =========================================
+       FINAL CTA
+    ========================================= */
+
+    .contact{
+      background:var(--green);
+
+      color:#fff;
+    }
+
+    .contact .eyebrow{
+      color:#ffd0a5;
+    }
+
+    .contact .copy{
+      color:#d8e6dc;
+    }
+
+    .contact .btn{
+      border-color:#fff;
+    }
+
+    .contact .btn.primary{
+      background:#fff;
+
+      color:var(--green);
+    }
+
+    .contact .btn.secondary{
+      color:#fff;
+    }
+
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    footer{
+      padding:28px 0;
+
+      color:var(--muted);
+
+      font-size:.8rem;
+
+      border-top:1px solid var(--line);
+    }
+
+    footer .wrap{
+      display:flex;
+
+      justify-content:space-between;
+
+      gap:20px;
+    }
+
+
+    /* =========================================
+       ACCESSIBILITY
+    ========================================= */
+
+    :focus-visible{
+      outline:3px solid var(--orange);
+
+      outline-offset:3px;
+    }
+
+    @media(
+      prefers-reduced-motion:reduce
+    ){
+
+      html{
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after{
+        transition-duration:.01ms !important;
+
+        animation-duration:.01ms !important;
+      }
+    }
+
+
+    /* =========================================
+       TABLET
+    ========================================= */
+
+    @media(max-width:900px){
+
+      .fundraiser{
+        grid-template-columns:1fr;
+      }
+
+      .uses{
+        grid-template-columns:1fr;
+      }
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media(max-width:760px){
+
+      .nav{
+        align-items:flex-start;
+
+        flex-direction:column;
+
+        padding:18px 0;
+      }
+
+      nav{
+        gap:14px;
+      }
+
+      .hero{
+        padding:75px 0 80px;
+      }
+
+      .heading{
+        grid-template-columns:1fr;
+
+        gap:18px;
+      }
+
+      .story,
+      .support-card{
+        padding:25px;
+      }
+
+      .hero::after{
+        width:130vw;
+
+        right:-50vw;
+      }
+
+      footer .wrap{
+        flex-direction:column;
+      }
+    }
+
+
+    /* =========================================
+       SMALL MOBILE
+    ========================================= */
+
+    @media(max-width:600px){
+
+      h1{
+        font-size:
+          clamp(
+            3rem,
+            15vw,
+            5rem
+          );
+      }
+
+      .toggle{
+        position:absolute;
+
+        top:18px;
+
+        right:20px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header>
+
+  <div class="wrap nav">
+
+    <a
+      class="logo"
+      href="index.html"
+    >
+      Derek<b>Verbrugge</b>
+    </a>
+
+
+    <nav aria-label="Primary navigation">
+
+      <a href="#story">
+        Story
+      </a>
+
+      <a href="#support">
+        Support
+      </a>
+
+      <a href="#contact">
+        Share
+      </a>
+
+    </nav>
+
+
+    <label class="toggle">
+
+      <input
+        id="night"
+        type="checkbox"
+        checked
+      >
+
+      Night mode
+
+    </label>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+  <div class="wrap hero-content">
+
+    <p class="eyebrow">
+      A Personal Fundraiser
+    </p>
+
+
+    <h1>
+      Help me get<br>
+      <span>back on my feet.</span>
+    </h1>
+
+
+    <p class="lead">
+      I'm raising support through my GoFundMe to help cover rent
+      and the costs associated with getting through a difficult
+      work and recovery period.
+    </p>
+
+
+    <div class="buttons">
+
+      <a
+        class="btn primary"
+        href="https://gofund.me/af2b3ce30"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Support the GoFundMe ↗
+      </a>
+
+
+      <a
+        class="btn"
+        href="#story"
+      >
+        Read the Story
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     STORY
+========================================= -->
+
+<section id="story">
+
+  <div class="wrap">
+
+
+    <div class="heading">
+
+      <h2>
+        Derek's<br>
+        fundraiser.
+      </h2>
+
+
+      <p>
+        This is a dedicated page for my GoFundMe campaign.
+        The campaign itself contains the full story, updates,
+        fundraising progress, and current information.
+      </p>
+
+    </div>
+
+
+    <div class="fundraiser">
+
+
+      <!-- STORY -->
+
+      <article class="story">
+
+        <h3>
+          Why I'm asking for help
+        </h3>
+
+
+        <p>
+          In late August, I was attacked by a dog, and it injured my
+          back badly enough that I needed MRIs for back spasms. Those
+          scans showed multiple compressed disks, and the injury put
+          me out of work.
+        </p>
+
+
+        <p>
+          I had jobs lined up, but because of my work restrictions,
+          I couldn't take them.
+        </p>
+
+
+        <p>
+          Just as I was trying to return to work, my car suffered a
+          differential/transmission failure and is effectively totaled.
+          Before my car failed, I already had a temporary job and a
+          part-time job lined up.
+        </p>
+
+
+        <p>
+          Right now, this has left me in a very hard position. I'm
+          unable to find work, and I can't pay my rent or my bills.
+          Losing work after the attack was already a major setback,
+          and without a working car, it's been even harder to prepare
+          for and accept the work offers I am getting.
+        </p>
+
+
+        <p>
+          Every day this goes on, it gets harder to keep up and harder
+          to move forward.
+        </p>
+
+
+        <h3 style="margin-top:30px">
+          Working toward a way forward
+        </h3>
+
+
+        <p>
+          I'm hoping to receive backpay related to the attack, and I
+          have a lawyer working on it, but that process is moving slowly.
+          I have also applied for Vocational Rehabilitation to get
+          assistance taking the work offers I already have available,
+          but I need help now while those steps are still pending.
+        </p>
+
+
+        <p>
+          I'm asking for help so I can cover my rent and get through
+          my immediate bills while I work on getting back on my feet.
+          My plan is to use this support to stay current on rent and
+          handle the immediate pressure long enough to take the work
+          offers I'm getting but can't prepare for right now because
+          of my situation.
+        </p>
+
+
+        <h3 style="margin-top:30px">
+          Please consider helping
+        </h3>
+
+
+        <p>
+          I need help as soon as possible. If you're able to donate,
+          any amount would help me keep a roof over my head and give
+          me a real chance to take the work that's in front of me.
+        </p>
+
+
+        <p>
+          If you can't donate, sharing this fundraiser would mean a lot
+          to me and could help me reach someone who can.
+        </p>
+
+
+        <p>
+          Thank you for your support.
+        </p>
+
+      </article>
+
+
+      <!-- SUPPORT CARD -->
+
+      <aside
+        class="support-card"
+        id="support"
+      >
+
+        <span class="label">
+          GoFundMe Campaign
+        </span>
+
+
+        <h3>
+          Rent &amp;<br>
+          Work Recovery
+        </h3>
+
+
+        <p>
+          Visit the official campaign to donate, read the complete
+          story, and see the latest updates.
+        </p>
+
+
+        <a
+          class="btn"
+          href="https://gofund.me/af2b3ce30"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Go to GoFundMe ↗
+        </a>
+
+      </aside>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     WHERE YOUR SUPPORT GOES
+========================================= -->
+
+<section>
+
+  <div class="wrap">
+
+
+    <div class="heading">
+
+      <h2>
+        Where your<br>
+        support goes.
+      </h2>
+
+
+      <p>
+        The fundraiser is intended to provide practical financial
+        stability while I work through the current transition.
+      </p>
+
+    </div>
+
+
+    <div class="uses">
+
+
+      <article class="use">
+
+        <h3>
+          Housing
+        </h3>
+
+        <p>
+          Help with rent and keeping stable housing during the
+          recovery period.
+        </p>
+
+      </article>
+
+
+      <article class="use">
+
+        <h3>
+          Essential expenses
+        </h3>
+
+        <p>
+          Help cover necessary day-to-day costs while income and
+          employment are being stabilized.
+        </p>
+
+      </article>
+
+
+      <article class="use">
+
+        <h3>
+          Work recovery
+        </h3>
+
+        <p>
+          Provide breathing room to focus on getting back into
+          sustainable employment.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     SHARE
+========================================= -->
+
+<section>
+
+  <div class="wrap">
+
+
+    <div class="heading">
+
+      <h2>
+        Can't<br>
+        donate?
+      </h2>
+
+
+      <p>
+        Sharing the campaign can be just as valuable. A link sent to
+        someone who may be able to help can make a real difference.
+      </p>
+
+    </div>
+
+
+    <div class="note">
+
+      <strong>
+        Share the campaign:
+      </strong>
+
+      <span id="shareUrl">
+        https://gofund.me/af2b3ce30
+      </span>
+
+    </div>
+
+
+    <div
+      class="buttons"
+      style="margin-top:18px"
+    >
+
+      <button
+        class="btn green"
+        id="copyButton"
+        type="button"
+      >
+        Copy GoFundMe Link
+      </button>
+
+
+      <a
+        class="btn"
+        href="https://gofund.me/af2b3ce30"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Open Campaign ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================
+     FINAL CTA
+========================================= -->
+
+<section
+  id="contact"
+  class="contact"
+>
+
+  <div class="wrap">
+
+
+    <div class="heading">
+
+      <h2>
+        Help me<br>
+        move forward.
+      </h2>
+
+
+      <p class="copy">
+        If you're able to contribute, thank you. If you can share
+        the fundraiser with someone else, thank you for that too.
+      </p>
+
+    </div>
+
+
+    <div class="buttons">
+
+      <a
+        class="btn primary"
+        href="https://gofund.me/af2b3ce30"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Donate on GoFundMe ↗
+      </a>
+
+
+      <a
+        class="btn secondary"
+        href="index.html"
+      >
+        Back to Portfolio
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+  <div class="wrap">
+
+    <span id="copyright"></span>
+
+    <span>
+      Derek Verbrugge · GoFundMe
+    </span>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+  /* =========================================
+     CURRENT YEAR
+  ========================================= */
+
+  const currentYear =
+    new Date().getFullYear();
+
+  document
+    .getElementById("copyright")
+    .textContent =
+      `© ${currentYear} Derek Verbrugge`;
+
+
+  /* =========================================
+     COPY GOFUNDME LINK
+  ========================================= */
+
+  const copyButton =
+    document.getElementById("copyButton");
+
+  const shareUrl =
+    "https://gofund.me/af2b3ce30";
+
+
+  copyButton.addEventListener(
+    "click",
+    async () => {
+
+      try {
+
+        await navigator
+          .clipboard
+          .writeText(shareUrl);
+
+
+        const original =
+          copyButton.textContent;
+
+
+        copyButton.textContent =
+          "Link Copied ✓";
+
+
+        setTimeout(
+          () => {
+
+            copyButton.textContent =
+              original;
+
+          },
+          1800
+        );
+
+
+      } catch {
+
+        window.prompt(
+          "Copy this GoFundMe link:",
+          shareUrl
+        );
+
+      }
+
+    }
+  );
+
+</script>
+
+
+</body>
+</html>

@@ -5,344 +5,211 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
 
-  <meta
-    name="description"
-    content="Support Derek's Rent and Work Recovery Fund after a serious back injury and loss of transportation left him unable to work and struggling to cover rent and bills."
-  >
-
-  <meta
-    property="og:title"
-    content="Derek's Rent & Work Recovery Fund"
-  >
-
-  <meta
-    property="og:description"
-    content="Support Derek's Rent and Work Recovery Fund."
-  >
-
+  <meta name="description" content="Support Derek's Rent and Work Recovery Fund after a serious back injury and loss of transportation left him unable to work and struggling to cover rent and bills.">
+  <meta property="og:title" content="Derek's Rent & Work Recovery Fund">
+  <meta property="og:description" content="Support Derek's Rent and Work Recovery Fund.">
   <meta property="og:type" content="website">
 
   <title>Derek's Rent & Work Recovery Fund | Derek Verbrugge</title>
 
   <style>
-
-    /* =========================================
-       ROOT
-    ========================================= */
-
-    :root{
-      --bg:#f3f1e8;
-      --panel:#fffdf7;
-      --ink:#17231d;
-      --muted:#68736b;
-      --green:#174d38;
-      --green2:#286b4d;
-      --orange:#d66b32;
-      --line:#d7ddd3;
-      --cream:#ffdcbf;
+    :root {
+      --bg: #f3f1e8;
+      --panel: #fffdf7;
+      --ink: #17231d;
+      --muted: #68736b;
+      --green: #174d38;
+      --green2: #286b4d;
+      --orange: #d66b32;
+      --line: #d7ddd3;
+      --cream: #ffdcbf;
     }
 
-    :root:has(#night:checked){
-      --bg:#101713;
-      --panel:#17221b;
-      --ink:#f1f3e9;
-      --muted:#aeb9ae;
-      --green:#8bc7a2;
-      --green2:#b0e2bd;
-      --orange:#f29a58;
-      --line:#33443a;
-      --cream:#432a1d;
+    :root:has(#night:checked) {
+      --bg: #101713;
+      --panel: #17221b;
+      --ink: #f1f3e9;
+      --muted: #aeb9ae;
+      --green: #8bc7a2;
+      --green2: #b0e2bd;
+      --orange: #f29a58;
+      --line: #33443a;
+      --cream: #432a1d;
     }
 
-
-    /* =========================================
-       GLOBAL
-    ========================================= */
-
-    *{
-      box-sizing:border-box;
+    * {
+      box-sizing: border-box;
     }
 
-    html{
-      scroll-behavior:smooth;
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
     }
 
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--ink);
-
-      font:
-        16px/1.65
-        Arial,
-        Helvetica,
-        sans-serif;
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 16px/1.65 Arial, Helvetica, sans-serif;
     }
 
-    a{
-      color:inherit;
+    a {
+      color: inherit;
     }
 
-    .wrap{
-      width:min(
-        1120px,
-        calc(100% - 40px)
-      );
-
-      margin:auto;
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: auto;
     }
 
-
-    /* =========================================
-       HEADER
-    ========================================= */
-
-    header{
-      position:sticky;
-
-      top:0;
-
-      z-index:10;
-
-      background:color-mix(
-        in srgb,
-        var(--bg) 92%,
-        transparent
-      );
-
-      backdrop-filter:blur(10px);
-
-      border-bottom:1px solid var(--line);
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
 
-    .nav{
-      min-height:74px;
-
-      display:flex;
-
-      justify-content:space-between;
-
-      align-items:center;
-
-      gap:20px;
+    .nav {
+      min-height: 74px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
 
-    .logo{
-      font-size:1.25rem;
-
-      font-weight:900;
-
-      letter-spacing:-.06em;
-
-      text-decoration:none;
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: -.06em;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    .logo b{
-      color:var(--orange);
+    .logo b {
+      color: var(--orange);
     }
 
-    nav{
-      display:flex;
-
-      gap:20px;
-
-      flex-wrap:wrap;
-
-      align-items:center;
-
-      font-size:.78rem;
-
-      font-weight:800;
-
-      text-transform:uppercase;
-
-      letter-spacing:.08em;
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: .76rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .07em;
     }
 
-    nav a{
-      text-decoration:none;
-
-      transition:
-        color .18s ease;
+    nav a {
+      text-decoration: none;
+      transition: color .18s ease;
     }
 
     nav a:hover,
-    nav a:focus-visible{
-      color:var(--orange);
+    nav a:focus-visible {
+      color: var(--orange);
     }
 
-    .toggle{
-      display:inline-flex;
-
-      align-items:center;
-
-      gap:7px;
-
-      font-size:.75rem;
-
-      font-weight:800;
-
-      text-transform:uppercase;
-
-      cursor:pointer;
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
     }
 
-    .toggle input{
-      accent-color:var(--orange);
+    .toggle input {
+      accent-color: var(--orange);
     }
 
-
-    /* =========================================
-       HERO
-    ========================================= */
-
-    .hero{
-      position:relative;
-
-      overflow:hidden;
-
-      padding:100px 0 95px;
-
-      background:
-        linear-gradient(
-          135deg,
-          transparent 0 58%,
-          color-mix(
-            in srgb,
-            var(--green) 13%,
-            transparent
-          ) 58%
-        );
+    /* HERO */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 95px;
+      background: linear-gradient(
+        135deg,
+        transparent 0 58%,
+        color-mix(in srgb, var(--green) 13%, transparent) 58%
+      );
     }
 
-    .hero::after{
-      content:"";
-
-      position:absolute;
-
-      width:75vw;
-
-      height:1px;
-
-      right:-25vw;
-
-      bottom:28%;
-
-      background:
-        color-mix(
-          in srgb,
-          var(--green) 35%,
-          transparent
-        );
-
-      transform:rotate(-23deg);
-
-      transform-origin:center;
-
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 75vw;
+      height: 1px;
+      right: -25vw;
+      bottom: 28%;
+      background: color-mix(in srgb, var(--green) 35%, transparent);
+      transform: rotate(-23deg);
+      transform-origin: center;
       box-shadow:
-        0 34px 0
-        color-mix(
-          in srgb,
-          var(--green) 18%,
-          transparent
-        ),
-
-        0 68px 0
-        color-mix(
-          in srgb,
-          var(--green) 10%,
-          transparent
-        );
-
-      pointer-events:none;
+        0 34px 0 color-mix(in srgb, var(--green) 18%, transparent),
+        0 68px 0 color-mix(in srgb, var(--green) 10%, transparent);
+      pointer-events: none;
     }
 
-    .hero-content{
-      position:relative;
-
-      z-index:1;
-
-      max-width:900px;
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
     }
 
-    .eyebrow{
-      color:var(--orange);
-
-      font-size:.8rem;
-
-      font-weight:900;
-
-      letter-spacing:.18em;
-
-      text-transform:uppercase;
-
-      margin:0 0 20px;
+    .eyebrow {
+      color: var(--orange);
+      font-size: .8rem;
+      font-weight: 900;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin: 0 0 20px;
     }
 
-    h1{
-      font-size:
-        clamp(
-          3rem,
-          8vw,
-          7rem
-        );
-
-      line-height:.9;
-
-      letter-spacing:-.09em;
-
-      margin:0;
-
-      max-width:900px;
+    h1 {
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: .9;
+      letter-spacing: -.09em;
+      margin: 0;
+      max-width: 900px;
     }
 
-    h1 span{
-      color:var(--green2);
+    h1 span {
+      color: var(--green2);
     }
 
-    .lead{
-      max-width:720px;
-
-      color:var(--muted);
-
-      font-size:1.2rem;
-
-      margin:30px 0;
+    .lead {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.2rem;
+      margin: 30px 0;
     }
 
-    .buttons{
-      display:flex;
-
-      gap:12px;
-
-      flex-wrap:wrap;
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .btn{
-      display:inline-block;
-
-      padding:13px 19px;
-
-      border:1px solid var(--ink);
-
-      background:transparent;
-
-      color:inherit;
-
-      font-family:inherit;
-
-      text-decoration:none;
-
-      font-size:.78rem;
-
-      font-weight:900;
-
-      text-transform:uppercase;
-
-      letter-spacing:.08em;
-
-      cursor:pointer;
-
+    .btn {
+      display: inline-block;
+      padding: 13px 19px;
+      border: 1px solid var(--ink);
+      background: transparent;
+      color: inherit;
+      font-family: inherit;
+      text-decoration: none;
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      cursor: pointer;
       transition:
         background .18s ease,
         color .18s ease,
@@ -351,1205 +218,848 @@
     }
 
     .btn:hover,
-    .btn:focus-visible{
-      transform:translateY(-2px);
+    .btn:focus-visible {
+      transform: translateY(-2px);
     }
 
-    .btn.primary{
-      background:var(--orange);
-
-      color:#fff;
-
-      border-color:var(--orange);
+    .btn.primary {
+      background: var(--orange);
+      color: #fff;
+      border-color: var(--orange);
     }
 
-    .btn.green{
-      background:var(--green);
-
-      color:#fff;
-
-      border-color:var(--green);
+    .btn.green {
+      background: var(--green);
+      color: #fff;
+      border-color: var(--green);
     }
 
-
-    /* =========================================
-       SECTIONS
-    ========================================= */
-
-    section{
-      padding:78px 0;
-
-      border-top:1px solid var(--line);
+    /* SECTIONS */
+    section {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 90px;
     }
 
-    .heading{
-      display:grid;
-
-      grid-template-columns:
-        1fr 2fr;
-
-      gap:30px;
-
-      margin-bottom:35px;
+    .heading {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      margin-bottom: 35px;
     }
 
-    h2{
-      font-size:
-        clamp(
-          2.1rem,
-          5vw,
-          4.5rem
-        );
-
-      line-height:1;
-
-      letter-spacing:-.07em;
-
-      margin:0;
+    h2 {
+      font-size: clamp(2.1rem, 5vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: -.07em;
+      margin: 0;
     }
 
     .heading p,
-    .copy{
-      color:var(--muted);
-
-      max-width:720px;
+    .copy {
+      color: var(--muted);
+      max-width: 720px;
+      margin-top: 0;
     }
 
-
-    /* =========================================
-       FUNDRAISER STORY
-    ========================================= */
-
-    .fundraiser{
-      display:block;
+    /* FUNDRAISER STORY */
+    .story {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 32px;
     }
 
-    .story{
-      background:var(--panel);
-
-      border:1px solid var(--line);
-
-      padding:32px;
+    .story h3 {
+      margin: 0 0 14px;
+      font-size: 1.45rem;
+      letter-spacing: -.04em;
     }
 
-    .story h3{
-      margin:0 0 14px;
-
-      font-size:1.45rem;
-
-      letter-spacing:-.04em;
+    .story p {
+      margin: 0 0 18px;
+      color: var(--muted);
     }
 
-    .story p{
-      margin:0 0 18px;
-
-      color:var(--muted);
+    .story p:last-child {
+      margin-bottom: 0;
     }
 
-    .story p:last-child{
-      margin-bottom:0;
+    /* DONATION BAR */
+    .support-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      margin-top: 22px;
+      padding: 20px 24px;
+      background: var(--green);
+      color: #fff;
+      scroll-margin-top: 100px;
     }
 
-
-    /* =========================================
-       COMPACT DONATION CTA
-    ========================================= */
-
-    .support-card{
-      display:flex;
-
-      align-items:center;
-
-      justify-content:space-between;
-
-      gap:25px;
-
-      margin-top:22px;
-
-      padding:20px 24px;
-
-      background:var(--green);
-
-      color:#fff;
-
-      scroll-margin-top:100px;
+    .support-card-copy {
+      min-width: 0;
     }
 
-    .support-card-copy{
-      min-width:0;
+    .support-card .label {
+      color: #ffd0a5;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+      text-transform: uppercase;
     }
 
-    .support-card .label{
-      color:#ffd0a5;
-
-      font-size:.72rem;
-
-      font-weight:900;
-
-      letter-spacing:.14em;
-
-      text-transform:uppercase;
+    .support-card h3 {
+      margin: 5px 0 0;
+      font-size: 1.55rem;
+      line-height: 1.15;
+      letter-spacing: -.05em;
     }
 
-    .support-card h3{
-      margin:5px 0 0;
-
-      font-size:1.55rem;
-
-      line-height:1;
-
-      letter-spacing:-.05em;
+    .support-card p {
+      margin: 5px 0 0;
+      color: #d8e6dc;
+      font-size: .9rem;
     }
 
-    .support-card p{
-      margin:5px 0 0;
-
-      color:#d8e6dc;
-
-      font-size:.9rem;
+    .support-card .btn {
+      flex: 0 0 auto;
+      background: #fff;
+      color: var(--green);
+      border-color: #fff;
     }
 
-    .support-card .btn{
-      flex:0 0 auto;
-
-      background:#fff;
-
-      color:var(--green);
-
-      border-color:#fff;
+    /* DIRECT PAYMENTS WITHIN DONATE */
+    .payment-heading {
+      margin: 35px 0 18px;
     }
 
-
-    /* =========================================
-       WHERE YOUR SUPPORT GOES
-    ========================================= */
-
-    .uses{
-      display:grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
-      gap:16px;
+    .payment-heading h3 {
+      margin: 0 0 6px;
+      font-size: 1.5rem;
+      letter-spacing: -.04em;
     }
 
-    .use{
-      border-top:3px solid var(--orange);
-
-      padding:20px 0 0;
+    .payment-heading p {
+      margin: 0;
+      color: var(--muted);
     }
 
-    .use h3{
-      margin:0 0 8px;
-
-      font-size:1.15rem;
-
-      letter-spacing:-.03em;
+    /* CRYPTO AND PAYMENT CARDS */
+    .crypto {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .use p{
-      margin:0;
-
-      color:var(--muted);
-
-      font-size:.95rem;
+    .crypto-card {
+      min-width: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 18px;
+      text-align: center;
     }
 
-
-    /* =========================================
-       CRYPTO SUPPORT
-    ========================================= */
-
-    .crypto{
-      display:grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
-      gap:16px;
+    .crypto-card h3 {
+      margin: 0 0 14px;
+      font-size: 1rem;
+      letter-spacing: -.03em;
     }
 
-    .crypto-card{
-      background:var(--panel);
-
-      border:1px solid var(--line);
-
-      padding:18px;
-
-      text-align:center;
+    .crypto-card img {
+      display: block;
+      width: min(100%, 190px);
+      aspect-ratio: 1;
+      height: auto;
+      margin: 0 auto 14px;
+      object-fit: contain;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 0;
     }
 
-    .crypto-card h3{
-      margin:0 0 10px;
-
-      font-size:1rem;
-
-      letter-spacing:-.03em;
+    .crypto-card a:has(img) {
+      display: block;
+      width: fit-content;
+      max-width: 100%;
+      margin: 0 auto;
     }
 
-    .crypto-card img{
-      display:block;
-
-      width:min(100%,150px);
-
-      aspect-ratio:1;
-
-      margin:0 auto 12px;
-
-      object-fit:contain;
-
-      background:#fff;
-
-      border:1px solid var(--line);
+    .crypto-card .btn {
+      width: 100%;
+      margin-top: 4px;
+      font-size: .72rem;
+      padding: 12px 10px;
     }
 
-    .crypto-address{
-      display:block;
-
-      color:var(--muted);
-
-      font-size:.68rem;
-
-      line-height:1.35;
-
-      word-break:break-all;
+    .crypto-address {
+      display: block;
+      color: var(--muted);
+      font-size: .68rem;
+      line-height: 1.4;
+      word-break: break-all;
     }
 
-
-    /* =========================================
-       SHARE NOTE
-    ========================================= */
-
-    .note{
-      border:1px solid var(--line);
-
-      background:var(--panel);
-
-      padding:25px;
-
-      color:var(--muted);
+    /* WHERE SUPPORT GOES */
+    .uses {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
-    .note strong{
-      color:var(--ink);
+    .use {
+      border-top: 3px solid var(--orange);
+      padding: 20px 0 0;
     }
 
-
-    /* =========================================
-       FINAL CTA
-    ========================================= */
-
-    .contact{
-      background:var(--green);
-
-      color:#fff;
+    .use h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      letter-spacing: -.03em;
     }
 
-    .contact .eyebrow{
-      color:#ffd0a5;
+    .use p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
     }
 
-    .contact .copy{
-      color:#d8e6dc;
+    /* SHARE LINK NOTE */
+    .note {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 25px;
+      color: var(--muted);
+      overflow-wrap: anywhere;
     }
 
-    .contact .btn{
-      border-color:#fff;
+    .note strong {
+      color: var(--ink);
     }
 
-    .contact .btn.primary{
-      background:#fff;
-
-      color:var(--green);
+    /* FINAL SHARE CTA */
+    .contact {
+      background: var(--green);
+      color: #fff;
     }
 
-    .contact .btn.secondary{
-      color:#fff;
+    .contact .eyebrow {
+      color: #ffd0a5;
     }
 
-
-    /* =========================================
-       FOOTER
-    ========================================= */
-
-    footer{
-      padding:28px 0;
-
-      color:var(--muted);
-
-      font-size:.8rem;
-
-      border-top:1px solid var(--line);
+    .contact .copy {
+      color: #d8e6dc;
     }
 
-    footer .wrap{
-      display:flex;
-
-      justify-content:space-between;
-
-      gap:20px;
+    .contact .btn {
+      border-color: #fff;
     }
 
-
-    /* =========================================
-       ACCESSIBILITY
-    ========================================= */
-
-    :focus-visible{
-      outline:3px solid var(--orange);
-
-      outline-offset:3px;
+    .contact .btn.primary {
+      background: #fff;
+      color: var(--green);
     }
 
-    @media(
-      prefers-reduced-motion:reduce
-    ){
+    .contact .btn.secondary {
+      color: #fff;
+    }
 
-      html{
-        scroll-behavior:auto;
+    /* FOOTER */
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: .8rem;
+      border-top: 1px solid var(--line);
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* ACCESSIBILITY */
+    :focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
 
       *,
       *::before,
-      *::after{
-        transition-duration:.01ms !important;
-
-        animation-duration:.01ms !important;
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
       }
     }
 
-
-    /* =========================================
-       TABLET
-    ========================================= */
-
-    @media(max-width:900px){
-
-      .uses{
-        grid-template-columns:1fr;
+    /* TABLET */
+    @media (max-width: 900px) {
+      .nav {
+        flex-wrap: wrap;
+        padding: 14px 0;
       }
 
-      .crypto{
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-    }
-
-
-    /* =========================================
-       MOBILE
-    ========================================= */
-
-    @media(max-width:760px){
-
-      .nav{
-        align-items:flex-start;
-
-        flex-direction:column;
-
-        padding:18px 0;
+      nav {
+        order: 3;
+        width: 100%;
       }
 
-      nav{
-        gap:14px;
+      .uses {
+        grid-template-columns: 1fr;
       }
 
-      .hero{
-        padding:75px 0 80px;
-      }
-
-      .heading{
-        grid-template-columns:1fr;
-
-        gap:18px;
-      }
-
-      .story{
-        padding:25px;
-      }
-
-      .support-card{
-        align-items:flex-start;
-
-        flex-direction:column;
-
-        padding:20px;
-      }
-
-      .support-card .btn{
-        width:100%;
-
-        text-align:center;
-      }
-
-      .crypto{
-        grid-template-columns:1fr;
-      }
-
-      .hero::after{
-        width:130vw;
-
-        right:-50vw;
-      }
-
-      footer .wrap{
-        flex-direction:column;
+      .crypto {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-
-    /* =========================================
-       SMALL MOBILE
-    ========================================= */
-
-    @media(max-width:600px){
-
-      h1{
-        font-size:
-          clamp(
-            3rem,
-            15vw,
-            5rem
-          );
+    /* MOBILE */
+    @media (max-width: 760px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
       }
 
-      .toggle{
-        position:absolute;
+      nav {
+        order: initial;
+        width: 100%;
+        gap: 14px;
+      }
 
-        top:18px;
+      .hero {
+        padding: 75px 0 80px;
+      }
 
-        right:20px;
+      .heading {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .story {
+        padding: 25px;
+      }
+
+      .support-card {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .support-card .btn {
+        width: 100%;
+      }
+
+      .crypto {
+        grid-template-columns: 1fr;
+      }
+
+      .crypto-card img {
+        width: min(100%, 220px);
+      }
+
+      .hero::after {
+        width: 130vw;
+        right: -50vw;
+      }
+
+      footer .wrap {
+        flex-direction: column;
       }
     }
 
+    /* SMALL MOBILE */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+      }
+
+      .toggle {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+      }
+
+      .logo {
+        padding-right: 105px;
+      }
+    }
   </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================================
-     HEADER
-========================================= -->
-
-<header>
-
-  <div class="wrap nav">
-
-    <a
-      class="logo"
-      href="index.html"
-    >
-      Derek<b>Verbrugge</b>
-    </a>
-
-
-    <nav aria-label="Primary navigation">
-
-      <a href="#story">
-        Story
+  <!-- HEADER -->
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="index.html">
+        Derek<b>Verbrugge</b>
       </a>
 
-      <a href="#donate">
-        Donate
-      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#story">Story</a>
+        <a href="#donate">Donate</a>
+        <a href="#support">Support</a>
+        <a href="#crypto">Crypto</a>
+        <a href="#share">Share</a>
+      </nav>
 
-      <a href="#support">
-        Support
-      </a>
-
-      <a href="#crypto">
-        Crypto
-      </a>
-
-    </nav>
-
-
-    <label class="toggle">
-
-      <input
-        id="night"
-        type="checkbox"
-        checked
-      >
-
-      Night mode
-
-    </label>
-
-  </div>
-
-</header>
-
-
-<main>
-
-
-<!-- =========================================
-     HERO
-========================================= -->
-
-<section class="hero">
-
-  <div class="wrap hero-content">
-
-    <p class="eyebrow">
-      A Personal Fundraiser
-    </p>
-
-
-    <h1>
-      Help me get<br>
-      <span>back on my feet.</span>
-    </h1>
-
-
-    <p class="lead">
-      I'm raising support through my GoFundMe to help cover rent
-      and the costs associated with getting through a difficult
-      work and recovery period.
-    </p>
-
-
-    <div class="buttons">
-
-      <a
-        class="btn primary"
-        href="https://gofund.me/af2b3ce30"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Support the GoFundMe ↗
-      </a>
-
-
-      <a
-        class="btn"
-        href="#story"
-      >
-        Read the Story
-      </a>
-
+      <label class="toggle">
+        <input id="night" type="checkbox" checked>
+        Night mode
+      </label>
     </div>
+  </header>
 
-  </div>
+  <main>
 
-</section>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-content">
+        <p class="eyebrow">A Personal Fundraiser</p>
 
+        <h1>
+          Help me get<br>
+          <span>back on my feet.</span>
+        </h1>
 
-<!-- =========================================
-     STORY
-========================================= -->
-
-<section id="story">
-
-  <div class="wrap">
-
-
-    <div class="heading">
-
-      <h2>
-        Derek's<br>
-        fundraiser.
-      </h2>
-
-
-      <p>
-        This is a dedicated page for my GoFundMe campaign.
-        The campaign itself contains the full story, updates,
-        fundraising progress, and current information.
-      </p>
-
-    </div>
-
-
-    <div class="fundraiser">
-
-
-      <article class="story">
-
-        <h3>
-          Why I'm asking for help
-        </h3>
-
-
-        <p>
-          In late August, I was attacked by a dog, and it injured my
-          back badly enough that I needed MRIs for back spasms. Those
-          scans showed multiple compressed disks, and the injury put
-          me out of work.
+        <p class="lead">
+          I'm raising support through my GoFundMe to help cover rent
+          and the costs associated with getting through a difficult
+          work and recovery period.
         </p>
 
+        <div class="buttons">
+          <a
+            class="btn primary"
+            href="https://gofund.me/af2b3ce30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Support the GoFundMe ↗
+          </a>
 
-        <p>
-          I had jobs lined up, but because of my work restrictions,
-          I couldn't take them.
-        </p>
+          <a class="btn" href="#story">Read the Story</a>
+        </div>
+      </div>
+    </section>
 
-
-        <p>
-          Just as I was trying to return to work, my car suffered a
-          differential/transmission failure and is effectively totaled.
-          Before my car failed, I already had a temporary job and a
-          part-time job lined up.
-        </p>
-
-
-        <p>
-          Right now, this has left me in a very hard position. I'm
-          unable to find work, and I can't pay my rent or my bills.
-          Losing work after the attack was already a major setback,
-          and without a working car, it's been even harder to prepare
-          for and accept the work offers I am getting.
-        </p>
-
-
-        <p>
-          Every day this goes on, it gets harder to keep up and harder
-          to move forward.
-        </p>
-
-
-        <h3 style="margin-top:24px">
-          Working toward a way forward
-        </h3>
-
-
-        <p>
-          I'm hoping to receive backpay related to the attack, and I
-          have a lawyer working on it, but that process is moving slowly.
-          I have also applied for Vocational Rehabilitation to get
-          assistance taking the work offers I already have available,
-          but I need help now while those steps are still pending.
-        </p>
-
-
-        <p>
-          I'm asking for help so I can cover my rent and get through
-          my immediate bills while I work on getting back on my feet.
-          My plan is to use this support to stay current on rent and
-          handle the immediate pressure long enough to take the work
-          offers I'm getting but can't prepare for right now because
-          of my situation.
-        </p>
-
-
-        <h3 style="margin-top:24px">
-          Please consider helping
-        </h3>
-
-
-        <p>
-          I need help as soon as possible. If you're able to donate,
-          any amount would help me keep a roof over my head and give
-          me a real chance to take the work that's in front of me.
-        </p>
-
-
-        <p>
-          If you can't donate, sharing this fundraiser would mean a lot
-          to me and could help me reach someone who can.
-        </p>
-
-
-        <p>
-          Thank you for your support.
-        </p>
-
-      </article>
-
-
-      <!-- =====================================
-           COMPACT DONATION BAR
-      ====================================== -->
-
-      <aside
-        class="support-card"
-        id="donate"
-      >
-
-        <div class="support-card-copy">
-
-          <span class="label">
-            GoFundMe Campaign
-          </span>
-
-          <h3>
-            If you can help, please donate or share.
-          </h3>
+    <!-- STORY -->
+    <section id="story">
+      <div class="wrap">
+        <div class="heading">
+          <h2>
+            Derek's<br>
+            fundraiser.
+          </h2>
 
           <p>
-            Every contribution helps me keep up with rent and immediate bills.
+            This is a dedicated page for my GoFundMe campaign.
+            The campaign itself contains the full story, updates,
+            fundraising progress, and current information.
           </p>
-
         </div>
 
+        <article class="story">
+          <h3>Why I'm asking for help</h3>
 
-        <a
-          class="btn"
-          href="https://gofund.me/af2b3ce30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Donate ↗
-        </a>
+          <p>
+            In late August, I was attacked by a dog, and it injured my
+            back badly enough that I needed MRIs for back spasms. Those
+            scans showed multiple compressed disks, and the injury put
+            me out of work.
+          </p>
 
-      </aside>
+          <p>
+            I had jobs lined up, but because of my work restrictions,
+            I couldn't take them.
+          </p>
 
+          <p>
+            Just as I was trying to return to work, my car suffered a
+            differential/transmission failure and is effectively totaled.
+            Before my car failed, I already had a temporary job and a
+            part-time job lined up.
+          </p>
 
+          <p>
+            Right now, this has left me in a very hard position. I'm
+            unable to find work, and I can't pay my rent or my bills.
+            Losing work after the attack was already a major setback,
+            and without a working car, it's been even harder to prepare
+            for and accept the work offers I am getting.
+          </p>
+
+          <p>
+            Every day this goes on, it gets harder to keep up and harder
+            to move forward.
+          </p>
+
+          <h3 style="margin-top:24px">Working toward a way forward</h3>
+
+          <p>
+            I'm hoping to receive backpay related to the attack, and I
+            have a lawyer working on it, but that process is moving slowly.
+            I have also applied for Vocational Rehabilitation to get
+            assistance taking the work offers I already have available,
+            but I need help now while those steps are still pending.
+          </p>
+
+          <p>
+            I'm asking for help so I can cover my rent and get through
+            my immediate bills while I work on getting back on my feet.
+            My plan is to use this support to stay current on rent and
+            handle the immediate pressure long enough to take the work
+            offers I'm getting but can't prepare for right now because
+            of my situation.
+          </p>
+
+          <h3 style="margin-top:24px">Please consider helping</h3>
+
+          <p>
+            I need help as soon as possible. If you're able to donate,
+            any amount would help me keep a roof over my head and give
+            me a real chance to take the work that's in front of me.
+          </p>
+
+          <p>
+            If you can't donate, sharing this fundraiser would mean a lot
+            to me and could help me reach someone who can.
+          </p>
+
+          <p>Thank you for your support.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- DONATE: GOFUNDME AND DIRECT PAYMENT OPTIONS -->
+    <section id="donate">
+      <div class="wrap">
+        <div class="heading">
+          <h2>
+            Ways to<br>
+            donate.
+          </h2>
+
+          <p>
+            You can contribute through the GoFundME campaign or directly using Venmo, Cash App, or Chime.
+          </p>
+        </div>
+
+        <aside class="support-card">
+          <div class="support-card-copy">
+            <span class="label">GoFundMe Campaign</span>
+            <h3>If you can help, please donate or share.</h3>
+            <p>Every contribution helps me keep up with rent and immediate bills.</p>
+          </div>
+
+          <a
+            class="btn"
+            href="https://gofund.me/af2b3ce30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donate on GoFundMe ↗
+          </a>
+        </aside>
+
+        <div class="payment-heading">
+          <h3>Direct payment options</h3>
+          <p>Scan a QR code or open your preferred payment service.</p>
+        </div>
+
+        <div class="crypto">
+          <article class="crypto-card">
+            <h3>Venmo</h3>
+
+            <a
+              href="https://account.venmo.com/u/Derek-Verbrugge"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Derek's Venmo payment page"
+            >
+              <img
+                src="Donate/venmoDonateQr.jpeg"
+                alt="Venmo payment QR code"
+                loading="lazy"
+              >
+            </a>
+
+            <a
+              class="btn"
+              href="https://account.venmo.com/u/Derek-Verbrugge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pay with Venmo ↗
+            </a>
+          </article>
+
+          <article class="crypto-card">
+            <h3>Cash App</h3>
+
+            <a
+              href="https://cash.app/$DerekVerbrugge"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Derek's Cash App payment page"
+            >
+              <img
+                src="Donate/cashDonateQr.jpeg"
+                alt="Cash App payment QR code"
+                loading="lazy"
+              >
+            </a>
+
+            <a
+              class="btn"
+              href="https://cash.app/$DerekVerbrugge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pay with Cash App ↗
+            </a>
+          </article>
+
+          <article class="crypto-card">
+            <h3>Chime</h3>
+
+            <a
+              href="https://app.chime.com/link/qr?u=Derek-Verbrugge"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open Derek's Chime payment link"
+            >
+              <img
+                src="Donate/chimeDonateQr.jpeg"
+                alt="Chime payment QR code"
+                loading="lazy"
+              >
+            </a>
+
+            <a
+              class="btn"
+              href="https://app.chime.com/link/qr?u=Derek-Verbrugge"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pay with Chime ↗
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHERE YOUR SUPPORT GOES -->
+    <section id="support">
+      <div class="wrap">
+        <div class="heading">
+          <h2>
+            Where your<br>
+            support goes.
+          </h2>
+
+          <p>
+            The fundraiser is intended to provide practical financial
+            stability while I work through the current transition.
+          </p>
+        </div>
+
+        <div class="uses">
+          <article class="use">
+            <h3>Housing</h3>
+            <p>Help with rent and keeping stable housing during the recovery period.</p>
+          </article>
+
+          <article class="use">
+            <h3>Essential expenses</h3>
+            <p>Help cover necessary day-to-day costs while income and employment are being stabilized.</p>
+          </article>
+
+          <article class="use">
+            <h3>Work recovery</h3>
+            <p>Provide breathing room to focus on getting back into sustainable employment.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRYPTO SUPPORT -->
+    <section id="crypto">
+      <div class="wrap">
+        <div class="heading">
+          <h2>
+            Cryptocurrency<br>
+            donations.
+          </h2>
+
+          <p>
+            If you'd rather contribute cryptocurrency, scan the QR code
+            for your preferred currency or copy its wallet address.
+          </p>
+        </div>
+
+        <div class="crypto">
+          <article class="crypto-card">
+            <h3>Bitcoin</h3>
+            <img src="Donate/btcDonateQr.jpeg" alt="Bitcoin donation QR code" loading="lazy">
+            <code class="crypto-address">bc1qtwdys309ad5k55xx7cf6dr2y28nlp89ztk23hq</code>
+          </article>
+
+          <article class="crypto-card">
+            <h3>Ethereum</h3>
+            <img src="Donate/ethDonateQr.jpeg" alt="Ethereum donation QR code" loading="lazy">
+            <code class="crypto-address">0x302601A213a98A7b643a1CC5Fa56fD6cbB6F91dC</code>
+          </article>
+
+          <article class="crypto-card">
+            <h3>Bitcoin Cash</h3>
+            <img src="Donate/bchDonateQr.jpeg" alt="Bitcoin Cash donation QR code" loading="lazy">
+            <code class="crypto-address">bitcoincash:qqfysq5727kcfkpr4d2fzjd3x9vsy9tdj570u57kd7</code>
+          </article>
+
+          <article class="crypto-card">
+            <h3>Zcash</h3>
+            <img src="Donate/zecDonateQr.jpeg" alt="Zcash donation QR code" loading="lazy">
+            <code class="crypto-address">u1usvdmm8kutr2yffe6m5753uc4exrl4pu0m9c8gj97y07wf7ctr0z98gg4snrnfz6p9mnyjjs9s466wq60jknmw4ef50qkh5hh5gvahdk</code>
+          </article>
+
+          <article class="crypto-card">
+            <h3>Monero</h3>
+            <img src="Donate/xmrDonateQr.jpeg" alt="Monero donation QR code" loading="lazy">
+            <code class="crypto-address">42iCB7gkN8Ffruqqx8ATdf3jrvxFKmkUQ4KY9cLmRWczRVMDQRQq3yyDbUnv4XQfDSdmSueVHjqtQ9jKpRYoRHYpSadUzfu</code>
+          </article>
+
+          <article class="crypto-card">
+            <h3>Litecoin</h3>
+            <img src="Donate/ltcDonateQr.jpeg" alt="Litecoin donation QR code" loading="lazy">
+            <code class="crypto-address">ltc1qcuhk54rzknh3c5h256r2e79xtunva4nk4puujc</code>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHARE THE CAMPAIGN -->
+    <section>
+      <div class="wrap">
+        <div class="heading">
+          <h2>
+            Can't<br>
+            donate?
+          </h2>
+
+          <p>
+            Sharing the campaign can be just as valuable. A link sent to
+            someone who may be able to help can make a real difference.
+          </p>
+        </div>
+
+        <div class="note">
+          <strong>Share the campaign:</strong>
+          <span id="shareUrl">https://gofund.me/af2b3ce30</span>
+        </div>
+
+        <div class="buttons" style="margin-top:18px">
+          <button class="btn green" id="copyButton" type="button">
+            Copy GoFundMe Link
+          </button>
+
+          <a
+            class="btn"
+            href="https://gofund.me/af2b3ce30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Campaign ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL SHARE CTA -->
+    <section id="share" class="contact">
+      <div class="wrap">
+        <div class="heading">
+          <h2>
+            Help me<br>
+            move forward.
+          </h2>
+
+          <p class="copy">
+            If you're able to contribute, thank you. If you can share
+            the fundraiser with someone else, thank you for that too.
+          </p>
+        </div>
+
+        <div class="buttons">
+          <a
+            class="btn primary"
+            href="https://gofund.me/af2b3ce30"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Donate on GoFundMe ↗
+          </a>
+
+          <button class="btn secondary" id="copyButtonFinal" type="button">
+            Share Fundraiser
+          </button>
+
+          <a class="btn secondary" href="index.html">
+            Back to Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <span id="copyright"></span>
+      <span>Derek Verbrugge · GoFundMe</span>
     </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     WHERE YOUR SUPPORT GOES
-========================================= -->
-
-<section id="support">
-
-  <div class="wrap">
-
-
-    <div class="heading">
-
-      <h2>
-        Where your<br>
-        support goes.
-      </h2>
-
-
-      <p>
-        The fundraiser is intended to provide practical financial
-        stability while I work through the current transition.
-      </p>
-
-    </div>
-
-
-    <div class="uses">
-
-
-      <article class="use">
-
-        <h3>
-          Housing
-        </h3>
-
-        <p>
-          Help with rent and keeping stable housing during the
-          recovery period.
-        </p>
-
-      </article>
-
-
-      <article class="use">
-
-        <h3>
-          Essential expenses
-        </h3>
-
-        <p>
-          Help cover necessary day-to-day costs while income and
-          employment are being stabilized.
-        </p>
-
-      </article>
-
-
-      <article class="use">
-
-        <h3>
-          Work recovery
-        </h3>
-
-        <p>
-          Provide breathing room to focus on getting back into
-          sustainable employment.
-        </p>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     CRYPTO SUPPORT
-========================================= -->
-
-<section id="crypto">
-
-  <div class="wrap">
-
-
-    <div class="heading">
-
-      <h2>
-        Other ways<br>
-        to help.
-      </h2>
-
-
-      <p>
-        If you'd rather contribute cryptocurrency, you can use one of
-        the QR codes below. 
-      </p>
-
-    </div>
-
-
-    <div class="crypto">
-
-
-      <article class="crypto-card">
-
-        <h3>
-          Bitcoin
-        </h3>
-
-
-        <img
-          src="btcDonateQr.jpeg"
-          alt="Bitcoin donation QR code"
-        >
-
-
-        <code class="crypto-address">
-          bc1qtwdys309ad5k55xx7cf6dr2y28nlp89ztk23hq
-        </code>
-
-      </article>
-
-
-      <article class="crypto-card">
-
-        <h3>
-          Ethereum
-        </h3>
-
-
-        <img
-          src="ethDonateQr.jpeg"
-          alt="Ethereum donation QR code"
-        >
-
-
-        <code class="crypto-address">
-          0x302601A213a98A7b643a1CC5Fa56fD6cbB6F91dC
-        </code>
-
-      </article>
-
-
-      <article class="crypto-card">
-
-        <h3>
-          Bitcoin Cash
-        </h3>
-
-
-        <img
-          src="bchDonateQr.jpeg"
-          alt="Bitcoin Cash donation QR code"
-        >
-
-
-        <code class="crypto-address">
-          bitcoincash:qqfysq5727kcfkpr4d2fzjd3x9vsy9tdj570u57kd7
-        </code>
-
-      </article>
-
-            <article class="crypto-card">
-
-        <h3>
-          Z Cash
-        </h3>
-
-
-        <img
-          src="zecDonateQr.jpeg"
-          alt="Z Cash donation QR code"
-        >
-
-
-        <code class="crypto-address">
-          u1usvdmm8kutr2yffe6m5753uc4exrl4pu0m9c8gj97y07wf7ctr0z98gg4snrnfz6p9mnyjjs9s466wq60jknmw4ef50qkh5hh5gvahdk
-        </code>
-
-      </article>
-
-            <article class="crypto-card">
-
-        <h3>
-          Monero
-        </h3>
-
-
-        <img
-          src="xmrDonateQr.jpeg"
-          alt="Monero donation QR code"
-        >
-
-
-        <code class="crypto-address">
-          42iCB7gkN8Ffruqqx8ATdf3jrvxFKmkUQ4KY9cLmRWczRVMDQRQq3yyDbUnv4XQfDSdmSueVHjqtQ9jKpRYoRHYpSadUzfu
-        </code>
-
-      </article>
-
-            <article class="crypto-card">
-
-        <h3>
-          Litecoin
-        </h3>
-
-
-        <img
-          src="ltcDonateQr.jpeg"
-          alt="Litecoin donation QR code"
-        >
-
-
-        <code class="crypto-address">
-          ltc1qcuhk54rzknh3c5h256r2e79xtunva4nk4puujc
-        </code>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-<!-- =========================================
-     SHARE
-========================================= -->
-
-<section>
-
-  <div class="wrap">
-
-
-    <div class="heading">
-
-      <h2>
-        Can't<br>
-        donate?
-      </h2>
-
-
-      <p>
-        Sharing the campaign can be just as valuable. A link sent to
-        someone who may be able to help can make a real difference.
-      </p>
-
-    </div>
-
-
-    <div class="note">
-
-      <strong>
-        Share the campaign:
-      </strong>
-
-      <span id="shareUrl">
-        https://gofund.me/af2b3ce30
-      </span>
-
-    </div>
-
-
-    <div
-      class="buttons"
-      style="margin-top:18px"
-    >
-
-      <button
-        class="btn green"
-        id="copyButton"
-        type="button"
-      >
-        Copy GoFundMe Link
-      </button>
-
-
-      <a
-        class="btn"
-        href="https://gofund.me/af2b3ce30"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Open Campaign ↗
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     FINAL CTA
-========================================= -->
-
-<section
-  id="contact"
-  class="contact"
->
-
-  <div class="wrap">
-
-
-    <div class="heading">
-
-      <h2>
-        Help me<br>
-        move forward.
-      </h2>
-
-
-      <p class="copy">
-        If you're able to contribute, thank you. If you can share
-        the fundraiser with someone else, thank you for that too.
-      </p>
-
-    </div>
-
-
-    <div class="buttons">
-
-      <a
-        class="btn primary"
-        href="https://gofund.me/af2b3ce30"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Donate on GoFundMe ↗
-      </a>
-
-
-      <a
-        class="btn secondary"
-        href="index.html"
-      >
-        Back to Portfolio
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer>
-
-  <div class="wrap">
-
-    <span id="copyright"></span>
-
-    <span>
-      Derek Verbrugge · GoFundMe
-    </span>
-
-  </div>
-
-</footer>
-
-
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
-
-<script>
-
-  /* =========================================
-     CURRENT YEAR
-  ========================================= */
-
-  const currentYear =
-    new Date().getFullYear();
-
-  document
-    .getElementById("copyright")
-    .textContent =
-      `© ${currentYear} Derek Verbrugge`;
-
-
-  /* =========================================
-     COPY GOFUNDME LINK
-  ========================================= */
-
-  const copyButton =
-    document.getElementById("copyButton");
-
-  const shareUrl =
-    "https://gofund.me/af2b3ce30";
-
-
-  copyButton.addEventListener(
-    "click",
-    async () => {
-
+  </footer>
+
+  <script>
+    // Current year
+    document.getElementById("copyright").textContent =
+      `© ${new Date().getFullYear()} Derek Verbrugge`;
+
+    // GoFundMe share link
+    const shareUrl = "https://gofund.me/af2b3ce30";
+    const copyButton = document.getElementById("copyButton");
+    const copyButtonFinal = document.getElementById("copyButtonFinal");
+
+    async function copyFundraiserLink(button) {
       try {
+        await navigator.clipboard.writeText(shareUrl);
 
-        await navigator
-          .clipboard
-          .writeText(shareUrl);
+        const originalText = button.textContent;
+        button.textContent = "Link Copied ✓";
 
-
-        const original =
-          copyButton.textContent;
-
-
-        copyButton.textContent =
-          "Link Copied ✓";
-
-
-        setTimeout(
-          () => {
-
-            copyButton.textContent =
-              original;
-
-          },
-          1800
-        );
-
-
+        setTimeout(() => {
+          button.textContent = originalText;
+        }, 1800);
       } catch {
-
-        window.prompt(
-          "Copy this GoFundMe link:",
-          shareUrl
-        );
-
+        window.prompt("Copy this GoFundMe link:", shareUrl);
       }
-
     }
-  );
 
-</script>
+    copyButton.addEventListener("click", () => {
+      copyFundraiserLink(copyButton);
+    });
 
+    copyButtonFinal.addEventListener("click", () => {
+      copyFundraiserLink(copyButtonFinal);
+    });
+  </script>
 
 </body>
 </html>

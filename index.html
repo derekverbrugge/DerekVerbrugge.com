@@ -925,6 +925,20 @@ footer .wrap{
 
 }
 
+
+/* Anchor the portrait flush to the hero's bottom edge, without fading */
+.hero{padding-bottom:0}
+.hero .hero-layout{align-items:stretch}
+.hero .hero-copy{padding-bottom:100px;align-self:center}
+.hero .hero-portrait{align-self:end;overflow:hidden}
+.hero .hero-portrait img{margin:0;vertical-align:bottom}
+@media(max-width:760px){
+  .hero{padding-bottom:0}
+  .hero .hero-copy{padding-bottom:0}
+  .hero .hero-layout{gap:28px}
+  .hero .hero-portrait{align-self:end}
+}
+
 </style>
 </head>
 

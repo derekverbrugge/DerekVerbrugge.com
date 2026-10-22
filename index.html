@@ -335,6 +335,24 @@ h1 span{
 }
 
 
+
+/* Responsive portrait hero */
+.hero .hero-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+  gap:clamp(20px,4vw,56px);
+  align-items:center;
+}
+.hero .hero-copy{min-width:0}
+.hero h1{font-size:clamp(3rem,6.3vw,6.1rem)}
+.hero .hero-portrait{align-self:end;display:flex;align-items:flex-end;justify-content:center;min-width:0}
+.hero .hero-portrait img{display:block;width:100%;max-width:480px;height:auto;object-fit:contain}
+@media(max-width:760px){
+  .hero .hero-layout{grid-template-columns:1fr;gap:28px}
+  .hero h1{font-size:clamp(3rem,10vw,5rem)}
+  .hero .hero-portrait img{max-width:380px}
+}
+
 /* =========================================
    SECTIONS
 ========================================= */
@@ -972,10 +990,9 @@ footer .wrap{
 ========================================= -->
 
 <section class="hero">
-
-  <div class="wrap">
-
-    <p class="eyebrow">
+  <div class="wrap hero-layout">
+    <div class="hero-copy">
+<p class="eyebrow">
       Marketing · Design · Development
     </p>
 
@@ -1011,9 +1028,11 @@ footer .wrap{
       </a>
 
     </div>
-
+    </div>
+    <div class="hero-portrait">
+      <img src="studio_style_cutout_portrait_on_a_transparent_back.png" alt="Portrait of Derek Verbrugge" width="1278" height="1230" fetchpriority="high">
+    </div>
   </div>
-
 </section>
 
 

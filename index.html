@@ -965,6 +965,14 @@ footer .wrap{
   .work-grid .card{grid-template-rows:auto auto auto auto}
 }
 
+
+/* Portrait variants follow the existing night-mode toggle */
+.hero .hero-portrait{position:relative}
+.hero .hero-portrait img{width:100%;height:auto;display:block}
+.hero .hero-portrait .portrait-dark{display:none}
+:root:has(#night:checked) .hero .hero-portrait .portrait-light{display:none}
+:root:has(#night:checked) .hero .hero-portrait .portrait-dark{display:block}
+
 </style>
 </head>
 
@@ -1070,7 +1078,8 @@ footer .wrap{
     </div>
     </div>
     <div class="hero-portrait">
-      <img src="studio_style_cutout_portrait_on_a_transparent_back.png" alt="Portrait of Derek Verbrugge" width="1278" height="1230" fetchpriority="high">
+      <img class="portrait-light" src="file_00000000a33881f5a6452d49fa4db5e3.png" alt="Derek Verbrugge wearing a blue shirt and orange tie" width="1200" height="1200" fetchpriority="high">
+      <img class="portrait-dark" src="file_00000000337081f58023f1c5e6235005.png" alt="Derek Verbrugge wearing an orange shirt and navy tie" width="1200" height="1200" fetchpriority="high">
     </div>
   </div>
 </section>

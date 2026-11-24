@@ -22,7 +22,7 @@ def plain(s):
 pages=[]
 for p in sorted(ROOT.rglob('*.html')):
     rel=p.relative_to(ROOT)
-    if any(x.startswith('.') for x in rel.parts) or p.name in ('header.html','footer.html','404.html'): continue
+    if any(x.startswith('.') or x.lower() in {'vendor','node_modules','third_party','thirdparty','tests','examples'} for x in rel.parts) or p.name in ('header.html','footer.html','404.html'): continue
     raw=p.read_text(encoding='utf-8')
     if not re.search(r'<head\b',raw,re.I) or re.search(r'<meta[^>]*name=["\']robots["\'][^>]*noindex',raw,re.I): continue
     url=BASE+quote(str(rel).removesuffix('index.html') if p.name=='index.html' else str(rel))
